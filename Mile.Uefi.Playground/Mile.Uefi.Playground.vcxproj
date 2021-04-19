@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CB9EDEC8-3DCA-447C-90F7-204D2073B0AD}</ProjectGuid>
     <RootNamespace>Mile.Uefi.Playground</RootNamespace>
-    <MileProjectType>ConsoleApplication</MileProjectType>
+    <MileProjectType>UefiApplication</MileProjectType>
   </PropertyGroup>
   <Import Project="..\Mile.Project.VisualStudio\Mile.Project.Cpp.props" />
   <ImportGroup Label="PropertySheets">
@@ -15,28 +15,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <SDLCheck>false</SDLCheck>
       <TreatWarningAsError>false</TreatWarningAsError>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ExceptionHandling>false</ExceptionHandling>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <ControlFlowGuard>false</ControlFlowGuard>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
-      <AdditionalOptions>/Oi- %(AdditionalOptions)</AdditionalOptions>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
-    <Link>
-      <SubSystem>EFI Application</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <Driver>Driver</Driver>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
-      <RandomizedBaseAddress>
-      </RandomizedBaseAddress>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Mile.Project.Properties.h" />
