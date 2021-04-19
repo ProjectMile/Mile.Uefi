@@ -11,6 +11,10 @@
 #ifndef MILE_UEFI_CORE
 #define MILE_UEFI_CORE
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 #include <Uefi.h>
 #include <Guid\Acpi.h>
 #include <Guid\Btt.h>
@@ -236,6 +240,10 @@
 #include <Uefi\UefiGpt.h>
 #include <Uefi\UefiInternalFormRepresentation.h>
 #include <Uefi\UefiPxe.h>
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
 
 #ifndef __cplusplus
 #include <IndustryStandard\TcgPhysicalPresence.h>
