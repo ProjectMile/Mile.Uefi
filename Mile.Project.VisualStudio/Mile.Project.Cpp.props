@@ -95,6 +95,8 @@
     <IncludePath>$(MSBuildThisFileDirectory);$(IncludePath)</IncludePath>
     <TargetExt Condition="'$(MileProjectType)'=='UefiApplication'">.efi</TargetExt>
     <LinkIncremental Condition="'$(MileProjectType)'=='UefiApplication'">false</LinkIncremental>
+    <UefiApplicationResourceIncludePath Condition="'$(MileProjectType)'=='UefiApplication'">$(IncludePath)</UefiApplicationResourceIncludePath>
+    <IncludePath Condition="'$(MileProjectType)'=='UefiApplication'"></IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -149,6 +151,7 @@
     </Link>
     <ResourceCompile Condition="'$(MileProjectType)'!='StaticLibrary'">
       <PreprocessorDefinitions Condition="'$(MileProjectManifestFile)'!=''">_MILE_PROJECT_MANIFEST_FILE=$([System.String]::Copy('$(MileProjectManifestFile)').Replace('\','\\'));%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(MileProjectType)'=='UefiApplication'">$(UefiApplicationResourceIncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories>$(ProjectDir);$(MSBuildThisFileDirectory);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
