@@ -28,5 +28,5 @@ jobs:
       run: rm Output\* -vb -Recurse -Force -Include *.exp, *.idb, *.ilk, *.iobj, *.ipdb, *.lastbuildstate, *.lib, *.obj, *.res, *.tlog
     - uses: actions/upload-artifact@v2
       with:
-        name: LVGL_CI_Build
+        name: Mile.Uefi_CI_Build
         path: Output
