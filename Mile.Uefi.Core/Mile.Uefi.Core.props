@@ -15,9 +15,9 @@
     <UefiPlatform Condition="'$(Platform)'=='Win32'">Ia32</UefiPlatform>
     <UefiPlatform Condition="'$(Platform)'=='x64'">X64</UefiPlatform>
     
-    <IncludePath>$(MSBuildThisFileDirectory);$(MSBuildThisFileDirectory)$(UefiPlatform)\;$(IncludePath);</IncludePath>
+    <IncludePath>$(MSBuildThisFileDirectory)Include\;$(MSBuildThisFileDirectory)Include\$(UefiPlatform)\;$(IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Mile.Uefi.Core.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Mile.Uefi.Core.c" />
   </ItemGroup>
 </Project>
