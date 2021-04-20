@@ -134,8 +134,10 @@ EFI_STATUS EFIAPI UefiMain(
 
     UefiOutputString(
         g_SystemTable->ConOut,
-        L"Otokonoko no Sekai Version 0.1 [Build 1]\r\n"
-        L"Copyright (C) 2019 Covariant Institute. All rights reserved.\r\n"
+        L"Mile.Uefi UEFI Application Demo Version 0.1 [Build 1]\r\n"
+        L"Copyright (C) Project Mile. All rights reserved.\r\n"
+        L"\r\n"
+        L"Otokonoko no Sekai\r\n"
         L"\r\n");
 
     UefiOutputString(

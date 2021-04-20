@@ -83,6 +83,7 @@
     <UseDebugLibraries Condition="'$(Configuration)'=='Debug'">true</UseDebugLibraries>
     <UseDebugLibraries Condition="'$(Configuration)'=='Release'">false</UseDebugLibraries>
     <WholeProgramOptimization Condition="'$(Configuration)'=='Release'">true</WholeProgramOptimization>
+    <WholeProgramOptimization Condition="'$(MileProjectType)'=='UefiApplication'">false</WholeProgramOptimization>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <PropertyGroup>
@@ -92,6 +93,8 @@
     <LinkIncremental Condition="'$(Configuration)'=='Release'">false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <IncludePath>$(MSBuildThisFileDirectory);$(IncludePath)</IncludePath>
+    <TargetExt Condition="'$(MileProjectType)'=='UefiApplication'">.efi</TargetExt>
+    <LinkIncremental Condition="'$(MileProjectType)'=='UefiApplication'">false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -123,6 +126,7 @@
       <BufferSecurityCheck Condition="'$(MileProjectType)'=='UefiApplication'">false</BufferSecurityCheck>
       <ControlFlowGuard Condition="'$(MileProjectType)'=='UefiApplication'">false</ControlFlowGuard>
       <FunctionLevelLinking Condition="'$(MileProjectType)'=='UefiApplication'">false</FunctionLevelLinking>
+      <IntrinsicFunctions Condition="'$(MileProjectType)'=='UefiApplication'">false</IntrinsicFunctions>
       <AdditionalOptions Condition="'$(MileProjectType)'=='UefiApplication'">/Oi- %(AdditionalOptions)</AdditionalOptions>
       <WholeProgramOptimization Condition="'$(MileProjectType)'=='UefiApplication'">false</WholeProgramOptimization>
     </ClCompile>

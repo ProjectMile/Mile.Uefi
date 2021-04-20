@@ -9,10 +9,6 @@
   <ImportGroup Label="PropertySheets">
     <Import Project="..\Mile.Uefi.Core\Mile.Uefi.Core.props" />
   </ImportGroup>
-  <PropertyGroup>
-    <TargetExt>.efi</TargetExt>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <TreatWarningAsError>false</TreatWarningAsError>
