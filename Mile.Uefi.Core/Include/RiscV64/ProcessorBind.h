@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Processor or Compiler specific defines and types for RISC-V
 
   Copyright (c) 2016 - 2020, Hewlett Packard Enterprise Development LP. All rights reserved.<BR>
@@ -105,8 +105,8 @@ typedef INT64   INTN __attribute__ ((aligned (8)));
 ///
 /// Maximum legal RISC-V INTN and UINTN values.
 ///
-#define MAX_INTN   ((INTN)0x7FFFFFFFFFFFFFFFULL)
-#define MAX_UINTN  ((UINTN)0xFFFFFFFFFFFFFFFFULL)
+#define MAX_INTN   0x7FFFFFFFFFFFFFFFLL
+#define MAX_UINTN  0xFFFFFFFFFFFFFFFFULL
 
 ///
 /// The stack alignment required for RISC-V

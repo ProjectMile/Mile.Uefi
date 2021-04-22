@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Processor or Compiler specific defines and types for IA-32 architecture.
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
@@ -248,13 +248,13 @@ typedef INT32   INTN;
 ///
 /// Maximum legal IA-32 INTN and UINTN values.
 ///
-#define MAX_INTN   ((INTN)0x7FFFFFFF)
-#define MAX_UINTN  ((UINTN)0xFFFFFFFF)
+#define MAX_INTN   0x7FFFFFFF
+#define MAX_UINTN  0xFFFFFFFFU
 
 ///
 /// Minimum legal IA-32 INTN value.
 ///
-#define MIN_INTN   (((INTN)-2147483647) - 1)
+#define MIN_INTN   (-0x7FFFFFFF - 1) 
 
 ///
 /// The stack alignment required for IA-32.
