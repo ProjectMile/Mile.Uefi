@@ -1,0 +1,4 @@
+[submodule "Mile.Uefi.Playground/lvgl"]
+	path = Mile.Uefi.Playground/lvgl
+	url = https://github.com/lvgl/lvgl
+	branch = release/v7
