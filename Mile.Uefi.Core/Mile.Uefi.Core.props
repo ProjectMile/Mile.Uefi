@@ -17,7 +17,9 @@
     
     <IncludePath>$(MSBuildThisFileDirectory)Include\;$(MSBuildThisFileDirectory)Include\$(UefiPlatform)\;$(IncludePath);</IncludePath>
   </PropertyGroup>
-  <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Mile.Uefi.Core.c" />
-  </ItemGroup>
+  <Target Name="MileUefiCoreBuildSource" BeforeTargets="BeforeClCompile">
+    <ItemGroup>
+      <ClCompile Include="$(MSBuildThisFileDirectory)Source\Mile.Uefi.Core.c" />
+    </ItemGroup>
+  </Target>
 </Project>
