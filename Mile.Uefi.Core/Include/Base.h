@@ -316,9 +316,15 @@ struct _LIST_ENTRY {
 #define FALSE ((BOOLEAN)(0==1))
 
 ///
-/// NULL pointer (VOID *)
+/// NULL pointer
 ///
-#define NULL  ((VOID *) 0)
+#ifndef NULL
+#ifdef __cplusplus
+#define NULL 0
+#else
+#define NULL ((void *)0)
+#endif
+#endif
 
 //
 // Null character
