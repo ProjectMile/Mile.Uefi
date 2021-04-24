@@ -125,10 +125,6 @@
     <ClInclude Include="lvgl\lvgl.h" />
     <ClInclude Include="lvgl\lv_conf_template.h" />
     <ClInclude Include="lv_demo_widgets.h" />
-    <ClInclude Include="stdarg.h" />
-    <ClInclude Include="stdbool.h" />
-    <ClInclude Include="stddef.h" />
-    <ClInclude Include="stdint.h" />
     <ClInclude Include="stdio.h" />
     <ClInclude Include="stdlib.h" />
     <ClInclude Include="string.h" />

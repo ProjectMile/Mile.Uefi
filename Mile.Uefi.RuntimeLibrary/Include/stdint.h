@@ -1,5 +1,15 @@
-﻿#ifndef STDINT
-#define STDINT
+﻿/*
+ * PROJECT:   Mouri Internal Library Essentials
+ * FILE:      stdint.h
+ * PURPOSE:   The C Standard Library <stdint.h> header.
+ *
+ * LICENSE:   The MIT License
+ *
+ * DEVELOPER: Mouri_Naruto (Mouri_Naruto AT Outlook.com)
+ */
+
+#ifndef MILE_UEFI_STDINT
+#define MILE_UEFI_STDINT
 
 #include <Mile.Uefi.Specification.h>
 
@@ -111,4 +121,4 @@ typedef UINTN            uintptr_t;
 #define INTMAX_C(x)      INT64_C(x)
 #define UINTMAX_C(x)     UINT64_C(x)
 
-#endif // !STDINT
+#endif // !MILE_UEFI_STDINT

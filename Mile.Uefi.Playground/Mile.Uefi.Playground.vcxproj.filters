@@ -394,10 +394,6 @@
       <Filter>lvgl</Filter>
     </ClInclude>
     <ClInclude Include="lv_conf.h" />
-    <ClInclude Include="stdarg.h" />
-    <ClInclude Include="stdbool.h" />
-    <ClInclude Include="stddef.h" />
-    <ClInclude Include="stdint.h" />
     <ClInclude Include="stdio.h" />
     <ClInclude Include="stdlib.h" />
     <ClInclude Include="string.h" />
