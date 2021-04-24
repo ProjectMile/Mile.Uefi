@@ -1,7 +1,7 @@
 ﻿#ifndef STDINT
 #define STDINT
 
-#include <Mile.Uefi.Core.h>
+#include <Mile.Uefi.Specification.h>
 
 typedef INT8             int8_t;
 typedef INT16            int16_t;

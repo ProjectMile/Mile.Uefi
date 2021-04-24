@@ -1,7 +1,7 @@
 ﻿#ifndef STDARG
 #define STDARG
 
-#include <Mile.Uefi.Core.h>
+#include <Mile.Uefi.Specification.h>
 
 #define va_list VA_LIST
 

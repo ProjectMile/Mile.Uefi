@@ -1,20 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
   PROJECT:   Mouri Internal Library Essentials
-  FILE:      Mile.Uefi.Core.props
-  PURPOSE:   Property sheet for Mile.Uefi.Core project
+  FILE:      Mile.Uefi.RuntimeLibrary.props
+  PURPOSE:   Property sheet for UEFI Runtime Library project
 
   LICENSE:   The MIT License
 
   DEVELOPER: Mouri_Naruto (Mouri_Naruto AT Outlook.com)
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\Mile.Uefi.Specification\Mile.Uefi.Specification.props" />
+  </ImportGroup>
   <PropertyGroup>
-    <UefiPlatform Condition="'$(Platform)'=='ARM'">ARM</UefiPlatform>
-    <UefiPlatform Condition="'$(Platform)'=='ARM64'">AArch64</UefiPlatform>
-    <UefiPlatform Condition="'$(Platform)'=='Win32'">Ia32</UefiPlatform>
-    <UefiPlatform Condition="'$(Platform)'=='x64'">X64</UefiPlatform>
-    
     <IncludePath>$(MSBuildThisFileDirectory)Include\;$(MSBuildThisFileDirectory)Include\$(UefiPlatform)\;$(IncludePath);</IncludePath>
     <LibraryPath>$(MSBuildThisFileDirectory)Source\$(UefiPlatform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -38,9 +36,9 @@
       <AdditionalDependencies>uldiv.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <Target Name="MileUefiCoreBuildSource" BeforeTargets="BeforeClCompile">
+  <Target Name="MileUefiRuntimeLibraryBuildSource" BeforeTargets="BeforeClCompile">
     <ItemGroup>
-      <ClCompile Include="$(MSBuildThisFileDirectory)Source\Mile.Uefi.Core.c" />
+      
     </ItemGroup>
   </Target>
 </Project>

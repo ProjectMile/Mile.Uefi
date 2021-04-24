@@ -7,7 +7,7 @@
   </PropertyGroup>
   <Import Project="..\Mile.Project.VisualStudio\Mile.Project.Cpp.props" />
   <ImportGroup Label="PropertySheets">
-    <Import Project="..\Mile.Uefi.Core\Mile.Uefi.Core.props" />
+    <Import Project="..\Mile.Uefi.RuntimeLibrary\Mile.Uefi.RuntimeLibrary.props" />
   </ImportGroup>
   <PropertyGroup>
     <IncludePath>$(MSBuildThisFileDirectory);$(IncludePath);</IncludePath>

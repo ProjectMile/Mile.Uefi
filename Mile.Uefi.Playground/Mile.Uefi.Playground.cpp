@@ -10,21 +10,21 @@
 
 #ifndef _In_
 #define _In_
-#endif 
+#endif
 
 #ifndef _In_opt_
 #define _In_opt_
-#endif 
+#endif
 
 #ifndef _Out_
 #define _Out_
-#endif 
+#endif
 
 #ifndef _Out_opt_
 #define _Out_opt_
-#endif 
+#endif
 
-#include <Mile.Uefi.Core.h>
+#include <Mile.Uefi.Specification.h>
 
 #include "stddef.h"
 #include "stdint.h"

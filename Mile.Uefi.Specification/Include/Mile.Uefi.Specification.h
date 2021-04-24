@@ -1,15 +1,15 @@
 ﻿/*
  * PROJECT:   Mouri Internal Library Essentials
- * FILE:      Mile.Uefi.Core.h
- * PURPOSE:   Core Definition for UEFI Specification
+ * FILE:      Mile.Uefi.Specification.h
+ * PURPOSE:   Definition for UEFI Specification
  *
  * LICENSE:   The MIT License
  *
  * DEVELOPER: Mouri_Naruto (Mouri_Naruto AT Outlook.com)
  */
 
-#ifndef MILE_UEFI_CORE
-#define MILE_UEFI_CORE
+#ifndef MILE_UEFI_SPECIFICATION
+#define MILE_UEFI_SPECIFICATION
 
 #ifdef __cplusplus
 extern "C" {
@@ -256,4 +256,4 @@ extern "C" {
 #include <Protocol\TrEEProtocol.h>
 #endif // !__cplusplus
 
-#endif // !MILE_UEFI_CORE
+#endif // !MILE_UEFI_SPECIFICATION

@@ -1,14 +1,14 @@
 ﻿/*
  * PROJECT:   Mouri Internal Library Essentials
- * FILE:      Mile.Uefi.Core.c
- * PURPOSE:   Core Implementation for UEFI Specification
+ * FILE:      Mile.Uefi.Specification.c
+ * PURPOSE:   Implementation for UEFI Specification
  *
  * LICENSE:   The MIT License
  *
  * DEVELOPER: Mouri_Naruto (Mouri_Naruto AT Outlook.com)
  */
 
-#include <Mile.Uefi.Core.h>
+#include <Mile.Uefi.Specification.h>
 
 /* Include/Guid/GlobalVariable.h */
 EFI_GUID gEfiGlobalVariableGuid = { 0x8BE4DF61, 0x93CA, 0x11D2, { 0xAA, 0x0D, 0x00, 0xE0, 0x98, 0x03, 0x2B, 0x8C } };
