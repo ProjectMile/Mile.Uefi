@@ -1,5 +1,5 @@
-﻿#ifndef OP_STDBOOL
-#define OP_STDBOOL
+﻿#ifndef STDBOOL
+#define STDBOOL
 
 #define __bool_true_false_are_defined	1
 
@@ -11,5 +11,5 @@
 
 #endif // __cplusplus
 
-#endif // !OP_STDBOOL
+#endif // !STDBOOL
 

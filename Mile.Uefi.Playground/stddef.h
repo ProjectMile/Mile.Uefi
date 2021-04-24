@@ -1,11 +1,11 @@
-﻿#ifndef OP_STDDEF
-#define OP_STDDEF
+﻿#ifndef STDDEF
+#define STDDEF
 
-#include <Uefi.h>
+#include <Mile.Uefi.Core.h>
 
 typedef UINTN size_t;
 typedef INTN ptrdiff_t;
 #define offsetof(StrucName, Member)  OFFSET_OF(StrucName, Member)
 
-#endif // !OP_STDDEF
+#endif // !STDDEF
 

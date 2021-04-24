@@ -1,7 +1,7 @@
-﻿#ifndef OP_STDINT
-#define OP_STDINT
+﻿#ifndef STDINT
+#define STDINT
 
-#include <Uefi.h>
+#include <Mile.Uefi.Core.h>
 
 typedef INT8             int8_t;
 typedef INT16            int16_t;
@@ -111,4 +111,4 @@ typedef UINTN            uintptr_t;
 #define INTMAX_C(x)      INT64_C(x)
 #define UINTMAX_C(x)     UINT64_C(x)
 
-#endif // !OP_STDINT
+#endif // !STDINT
