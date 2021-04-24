@@ -16,7 +16,28 @@
     <UefiPlatform Condition="'$(Platform)'=='x64'">X64</UefiPlatform>
     
     <IncludePath>$(MSBuildThisFileDirectory)Include\;$(MSBuildThisFileDirectory)Include\$(UefiPlatform)\;$(IncludePath);</IncludePath>
+    <LibraryPath>$(MSBuildThisFileDirectory)Source\$(UefiPlatform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link Condition="'$(Platform)'=='Win32'">
+      <AdditionalDependencies>lldiv.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>lldvrm.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>llmul.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>llrem.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>llshl.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>llshr.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ulldiv.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ulldvrm.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ullrem.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ullshr.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Link Condition="'$(Platform)'=='ARM'">
+      <AdditionalDependencies>div.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ldivmod.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>llsr.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>uldiv.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
   <Target Name="MileUefiCoreBuildSource" BeforeTargets="BeforeClCompile">
     <ItemGroup>
       <ClCompile Include="$(MSBuildThisFileDirectory)Source\Mile.Uefi.Core.c" />
