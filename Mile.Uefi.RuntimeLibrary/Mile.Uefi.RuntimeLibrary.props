@@ -28,6 +28,8 @@
       <AdditionalDependencies>ulldvrm.obj;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalDependencies>ullrem.obj;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalDependencies>ullshr.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ftol.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ftol2.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Link Condition="'$(Platform)'=='ARM'">
       <AdditionalDependencies>div.obj;%(AdditionalDependencies)</AdditionalDependencies>
@@ -38,7 +40,7 @@
   </ItemDefinitionGroup>
   <Target Name="MileUefiRuntimeLibraryBuildSource" BeforeTargets="BeforeClCompile">
     <ItemGroup>
-      
+      <ClCompile Include="$(MSBuildThisFileDirectory)Source\msvc_support.c" />   
     </ItemGroup>
   </Target>
 </Project>
