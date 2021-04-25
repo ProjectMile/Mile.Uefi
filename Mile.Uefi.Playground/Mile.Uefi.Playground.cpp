@@ -205,11 +205,18 @@ extern "C" char* strncpy(char* dest, const char* src, size_t n)
 
 #include <lvgl/lvgl.h>
 #include "lv_demo_widgets.h"
+#include "lv_demo_benchmark.h"
+#include "lv_demo_keypad_encoder.h"
 
 lv_disp_drv_t g_LvglDisplayDriver;
 lv_disp_buf_t g_LvglDisplayBuffer;
 lv_color_t g_LvglDisplayRawBuffer[1048576];
 
+lv_indev_drv_t g_LvglPointerDriver;
+lv_indev_t* g_LvglPointerDevice;
+
+lv_indev_drv_t g_LvglKeyboardDriver;
+lv_indev_t* g_LvglKeyboardDevice;
 
 void LvglDisplayDriverFlushCallback(
     lv_disp_drv_t* disp_drv,
@@ -233,62 +240,207 @@ void LvglDisplayDriverFlushCallback(
     ::lv_disp_flush_ready(disp_drv);
 }
 
-void LvglDisplayDriverRounderCallback(
-    lv_disp_drv_t* disp_drv,
-    lv_area_t* area)
-{
-    area->x1 = 0;
-    area->x2 = disp_drv->hor_res - 1;
-    area->y1 = 0;
-    area->y2 = disp_drv->ver_res - 1;
-}
-
 void EFIAPI Timeout(
     IN EFI_EVENT      Event,
     IN VOID* Context)
 {
     ::lv_tick_inc(10);
-    ::lv_task_handler();
-    /*::UefiOutputString(
-        g_SystemTable->ConOut,
-        L"Tick.\r\n");*/
     return;
 }
 
 EFI_SERIAL_IO_PROTOCOL* g_SerialIoProtocol = nullptr;
 
-void serial_send(const char* text)
+void my_log_cb(
+    lv_log_level_t level,
+    const char* file,
+    uint32_t line,
+    const char* fn_name,
+    const char* dsc)
 {
-    UINTN length = strlen(text);
-    g_SerialIoProtocol->Write(g_SerialIoProtocol, &length, const_cast<void*>(reinterpret_cast<const void*>(text)));
+    const char* log_level_string[] =
+    {
+        "TRACE",
+        "INFO",
+        "WARNING",
+        "ERROR",
+        "USER"
+    };
+
+    char buffer[32768];
+
+    UINTN length = ::lv_snprintf(
+        buffer,
+        32768,
+        "%s: File: %s#%d: %s: %s\n",
+        log_level_string[level],
+        file,
+        line,
+        fn_name,
+        dsc);
+
+    g_SerialIoProtocol->Write(
+        g_SerialIoProtocol,
+        &length,
+        buffer);
 }
 
-void my_log_cb(lv_log_level_t level, const char* file, uint32_t line, const char* fn_name, const char* dsc)
+EFI_STATUS MileUefiConnectAllControllers()
 {
-    /*Send the logs via serial port*/
-    if (level == LV_LOG_LEVEL_ERROR) serial_send("ERROR: ");
-    if (level == LV_LOG_LEVEL_WARN)  serial_send("WARNING: ");
-    if (level == LV_LOG_LEVEL_INFO)  serial_send("INFO: ");
-    if (level == LV_LOG_LEVEL_TRACE) serial_send("TRACE: ");
+    EFI_STATUS Status = EFI_SUCCESS;
 
-    serial_send("File: ");
-    serial_send(file);
+    UINTN HandlesCount = 0;
+    EFI_HANDLE* Handles = nullptr;
 
-    //char line_str[8];
-    //sprintf(line_str, "%d", line);
-    //serial_send("#");
-    //serial_send(line_str);
+    Status = g_BootServices->LocateHandleBuffer(
+        EFI_LOCATE_SEARCH_TYPE::ByProtocol,
+        &gEfiDevicePathProtocolGuid,
+        nullptr,
+        &HandlesCount,
+        &Handles);
+    if (!EFI_ERROR(Status))
+    {
+        for (UINTN i = 0; i < HandlesCount; ++i)
+        {
+            g_BootServices->ConnectController(
+                Handles[i],
+                nullptr,
+                nullptr,
+                TRUE);
+        }
 
-    //serial_send(": ");
-    serial_send(fn_name);
-    serial_send(": ");
-    serial_send(dsc);
-    serial_send("\n");
+        g_BootServices->FreePool(Handles);
+    }
+
+    return Status;
+}
+
+EFI_SIMPLE_POINTER_PROTOCOL* g_SimplePointerProtocol;
+
+bool win_drv_read(
+    lv_indev_drv_t* indev_drv,
+    lv_indev_data_t* data)
+{
+    indev_drv;
+
+    EFI_SIMPLE_POINTER_STATE State;
+    if (!EFI_ERROR(g_SimplePointerProtocol->GetState(
+        g_SimplePointerProtocol,
+        &State)))
+    {
+        data->state = static_cast<lv_indev_state_t>(
+            State.LeftButton ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL);
+        data->point.x += State.RelativeMovementX / g_SimplePointerProtocol->Mode->ResolutionX * 4;
+        data->point.y += State.RelativeMovementY / g_SimplePointerProtocol->Mode->ResolutionY * 4;
+
+        if (data->point.x < 0)
+        {
+            data->point.x = 0;
+        }
+        if (data->point.x > g_LvglDisplayDriver.hor_res)
+        {
+            data->point.x = g_LvglDisplayDriver.hor_res;
+        }
+
+        if (data->point.y < 0)
+        {
+            data->point.y = 0;
+        }
+        if (data->point.y > g_LvglDisplayDriver.ver_res)
+        {
+            data->point.y = g_LvglDisplayDriver.ver_res;
+        }
+    }
+
+    return false;
+}
+
+extern "C" const lv_img_dsc_t mouse_cursor_icon;
+
+EFI_SIMPLE_TEXT_INPUT_PROTOCOL* g_SimpleTextInputProtocol;
+
+bool win_kb_read(lv_indev_drv_t* indev_drv, lv_indev_data_t* data)
+{
+    (void)indev_drv;      /*Unused*/
+
+    EFI_INPUT_KEY InputKey;
+    if (!EFI_ERROR(g_SimpleTextInputProtocol->ReadKeyStroke(
+        g_SimpleTextInputProtocol,
+        &InputKey)))
+    {
+        switch (InputKey.ScanCode)
+        {
+        case SCAN_UP:
+            data->key = LV_KEY_UP;
+            break;
+        case SCAN_DOWN:
+            data->key = LV_KEY_DOWN;
+            break;
+        case SCAN_LEFT:
+            data->key = LV_KEY_LEFT;
+            break;
+        case SCAN_RIGHT:
+            data->key = LV_KEY_RIGHT;
+            break;
+        case SCAN_ESC:
+            data->key = LV_KEY_ESC;
+            break;
+        case SCAN_DELETE:
+            data->key = LV_KEY_DEL;
+            break;
+        /*case VK_BACK:
+            data->key = LV_KEY_BACKSPACE;
+            break;
+        case VK_RETURN:
+            data->key = LV_KEY_ENTER;
+            break;*/
+        case SCAN_PAGE_DOWN:
+            data->key = LV_KEY_NEXT;
+            break;
+        case SCAN_PAGE_UP:
+            data->key = LV_KEY_PREV;
+            break;
+        case SCAN_HOME:
+            data->key = LV_KEY_HOME;
+            break;
+        case SCAN_END:
+            data->key = LV_KEY_END;
+            break;
+        default:
+            if (InputKey.UnicodeChar == CHAR_BACKSPACE)
+            {
+                data->key = LV_KEY_BACKSPACE;
+            }
+            else if (InputKey.UnicodeChar == CHAR_CARRIAGE_RETURN)
+            {
+                data->key = LV_KEY_ENTER;
+            }
+            else
+            {
+                data->key = InputKey.UnicodeChar;
+            }
+            
+            break;
+        }
+
+        data->state = LV_INDEV_STATE_PR;
+    }
+
+    return false;
 }
 
 EFI_STATUS LvglUefiHalInit()
 {
     EFI_STATUS Status = EFI_SUCCESS;
+
+    Status = ::MileUefiConnectAllControllers();
+    if (EFI_ERROR(Status))
+    {
+        ::UefiOutputString(
+            g_SystemTable->ConOut,
+            L"Failed to connect all controllers.\r\n");
+
+        return Status;
+    }
 
     EFI_HANDLE handles[128];
     UINTN handles_size = sizeof(handles);
@@ -325,22 +477,12 @@ EFI_STATUS LvglUefiHalInit()
         return Status;
     }
 
-    Status = g_BootServices->LocateProtocol(
-        &gEfiGraphicsOutputProtocolGuid,
-        nullptr,
-        reinterpret_cast<void**>(&g_GraphicsOutputProtocol));
-    if (EFI_ERROR(Status))
-    {
-        ::UefiOutputString(
-            g_SystemTable->ConOut,
-            L"Failed to locate the Graphics Output Protocol.\r\n");
-
-        return Status;
-    }
+    ::lv_log_register_print_cb(my_log_cb);
 
     EFI_HANDLE TimerOne = nullptr;
 
-    Status = g_BootServices->CreateEvent(EVT_NOTIFY_SIGNAL | EVT_TIMER,
+    Status = g_BootServices->CreateEvent(
+        EVT_NOTIFY_SIGNAL | EVT_TIMER,
         TPL_CALLBACK,
         Timeout,
         nullptr,
@@ -367,6 +509,19 @@ EFI_STATUS LvglUefiHalInit()
         return Status;
     }
 
+    Status = g_BootServices->LocateProtocol(
+        &gEfiGraphicsOutputProtocolGuid,
+        nullptr,
+        reinterpret_cast<void**>(&g_GraphicsOutputProtocol));
+    if (EFI_ERROR(Status))
+    {
+        ::UefiOutputString(
+            g_SystemTable->ConOut,
+            L"Failed to locate the Graphics Output Protocol.\r\n");
+
+        return Status;
+    }
+
     ::lv_disp_drv_init(&g_LvglDisplayDriver);
 
     ::lv_disp_buf_init(
@@ -381,11 +536,48 @@ EFI_STATUS LvglUefiHalInit()
         g_GraphicsOutputProtocol->Mode->Info->VerticalResolution);
     g_LvglDisplayDriver.flush_cb = ::LvglDisplayDriverFlushCallback;
     g_LvglDisplayDriver.buffer = &g_LvglDisplayBuffer;
-    g_LvglDisplayDriver.rounder_cb = ::LvglDisplayDriverRounderCallback;
 
     ::lv_disp_drv_register(&g_LvglDisplayDriver);
 
-    ::lv_log_register_print_cb(my_log_cb);
+    Status = g_BootServices->LocateProtocol(
+        &gEfiSimplePointerProtocolGuid,
+        nullptr,
+        reinterpret_cast<void**>(&g_SimplePointerProtocol));
+    if (EFI_ERROR(Status))
+    {
+        ::UefiOutputString(
+            g_SystemTable->ConOut,
+            L"Failed to locate the Simple Pointer Protocol.\r\n");
+
+        return Status;
+    }
+
+    ::lv_indev_drv_init(&g_LvglPointerDriver);
+    g_LvglPointerDriver.type = LV_INDEV_TYPE_POINTER;
+    g_LvglPointerDriver.read_cb = ::win_drv_read;
+    g_LvglPointerDevice = ::lv_indev_drv_register(&g_LvglPointerDriver);
+
+    lv_obj_t* cursor_obj = lv_img_create(lv_scr_act(), nullptr);
+    ::lv_img_set_src(cursor_obj, &mouse_cursor_icon);
+    ::lv_indev_set_cursor(g_LvglPointerDevice, cursor_obj);
+
+    Status = g_BootServices->LocateProtocol(
+        &gEfiSimpleTextInProtocolGuid,
+        nullptr,
+        reinterpret_cast<void**>(&g_SimpleTextInputProtocol));
+    if (EFI_ERROR(Status))
+    {
+        ::UefiOutputString(
+            g_SystemTable->ConOut,
+            L"Failed to locate the Simple Text Input Protocol.\r\n");
+
+        return Status;
+    }
+
+    ::lv_indev_drv_init(&g_LvglKeyboardDriver);
+    g_LvglKeyboardDriver.type = LV_INDEV_TYPE_KEYPAD;
+    g_LvglKeyboardDriver.read_cb = ::win_kb_read;
+    g_LvglKeyboardDevice = ::lv_indev_drv_register(&g_LvglKeyboardDriver);
 
     return EFI_SUCCESS;
 }
@@ -419,10 +611,13 @@ EFI_STATUS EFIAPI UefiMain(
         ::BugCheck();
     }
 
-    lv_demo_widgets();
+    //::lv_demo_widgets();
+    //::lv_demo_benchmark();
+    ::lv_demo_keypad_encoder();
 
     for (;;)
     {
+        ::lv_task_handler();
         g_BootServices->Stall(10 * 1000);
     }
 

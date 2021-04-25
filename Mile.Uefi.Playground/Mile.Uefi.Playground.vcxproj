@@ -124,12 +124,19 @@
     <ClInclude Include="lvgl\tests\lv_test_conf.h" />
     <ClInclude Include="lvgl\lvgl.h" />
     <ClInclude Include="lvgl\lv_conf_template.h" />
+    <ClInclude Include="lv_demo_benchmark.h" />
+    <ClInclude Include="lv_demo_keypad_encoder.h" />
     <ClInclude Include="lv_demo_widgets.h" />
     <ClInclude Include="stdio.h" />
     <ClInclude Include="stdlib.h" />
     <ClInclude Include="string.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="img_cogwheel_alpha16.c" />
+    <ClCompile Include="img_cogwheel_argb.c" />
+    <ClCompile Include="img_cogwheel_chroma_keyed.c" />
+    <ClCompile Include="img_cogwheel_indexed16.c" />
+    <ClCompile Include="img_cogwheel_rgb.c" />
     <ClCompile Include="lvgl\examples\porting\lv_port_disp_template.c" />
     <ClCompile Include="lvgl\examples\porting\lv_port_fs_template.c" />
     <ClCompile Include="lvgl\examples\porting\lv_port_indev_template.c" />
@@ -254,6 +261,12 @@
     <ClCompile Include="lvgl\tests\lv_test_widgets\lv_test_label.c" />
     <ClCompile Include="lvgl\tests\lv_test_assert.c" />
     <ClCompile Include="lvgl\tests\lv_test_main.c" />
+    <ClCompile Include="lv_demo_benchmark.c" />
+    <ClCompile Include="lv_demo_keypad_encoder.c" />
+    <ClCompile Include="lv_font_montserrat_12_compr_az.c" />
+    <ClCompile Include="lv_font_montserrat_16_compr_az.c" />
+    <ClCompile Include="lv_font_montserrat_28_compr_az.c" />
+    <ClCompile Include="mouse_cursor_icon.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="lvgl\.github\ISSUE_TEMPLATE\bug-report.md" />

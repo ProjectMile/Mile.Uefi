@@ -76,6 +76,15 @@
     <Filter Include="lvgl\zephyr">
       <UniqueIdentifier>{37345597-e5c5-4400-8463-fdd33a090aa6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lv_demo_benchmark">
+      <UniqueIdentifier>{006990f9-7db9-40e8-b050-4f35e998175e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demo_widgets">
+      <UniqueIdentifier>{464622b0-d5b5-4dc6-b0ea-83e8982c483e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demo_keypad_encoder">
+      <UniqueIdentifier>{7518d5d3-c403-42dc-aff4-1df79b111f42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lvgl\examples\porting\lv_port_disp_template.h">
@@ -397,7 +406,15 @@
     <ClInclude Include="stdio.h" />
     <ClInclude Include="stdlib.h" />
     <ClInclude Include="string.h" />
-    <ClInclude Include="lv_demo_widgets.h" />
+    <ClInclude Include="lv_demo_benchmark.h">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demo_widgets.h">
+      <Filter>lv_demo_widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demo_keypad_encoder.h">
+      <Filter>lv_demo_keypad_encoder</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lvgl\examples\porting\lv_port_disp_template.c">
@@ -772,7 +789,40 @@
     <ClCompile Include="lvgl\tests\lv_test_main.c">
       <Filter>lvgl\tests</Filter>
     </ClCompile>
-    <ClCompile Include="lv_demo_widgets.c" />
+    <ClCompile Include="mouse_cursor_icon.c" />
+    <ClCompile Include="img_cogwheel_alpha16.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="img_cogwheel_argb.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="img_cogwheel_chroma_keyed.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="img_cogwheel_indexed16.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="img_cogwheel_rgb.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demo_benchmark.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_font_montserrat_12_compr_az.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_font_montserrat_16_compr_az.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_font_montserrat_28_compr_az.c">
+      <Filter>lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demo_widgets.c">
+      <Filter>lv_demo_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demo_keypad_encoder.c">
+      <Filter>lv_demo_keypad_encoder</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="lvgl\.github\ISSUE_TEMPLATE\bug-report.md">
