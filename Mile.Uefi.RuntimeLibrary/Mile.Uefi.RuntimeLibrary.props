@@ -17,6 +17,9 @@
     <LibraryPath>$(MSBuildThisFileDirectory)Source\$(UefiPlatform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>chkstk.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
     <Link Condition="'$(Platform)'=='Win32'">
       <AdditionalDependencies>lldiv.obj;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalDependencies>lldvrm.obj;%(AdditionalDependencies)</AdditionalDependencies>
