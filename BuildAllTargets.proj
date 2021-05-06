@@ -4,7 +4,7 @@
   ToolsVersion="4.0" 
   xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SolutionPath>$(MSBuildThisFileDirectory)Mile.Uefi.sln</SolutionPath>
+    <SolutionPath>$(MSBuildThisFileDirectory)*.sln</SolutionPath>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="$(SolutionPath)">
