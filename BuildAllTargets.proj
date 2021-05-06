@@ -1,4 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PROJECT:   Mouri Internal Library Essentials
+  FILE:      BuildAllTargets.proj
+  PURPOSE:   Build all targets script for Visual Studio C++ Project
+
+  LICENSE:   The MIT License
+
+  DEVELOPER: Mouri_Naruto (Mouri_Naruto AT Outlook.com)
+-->
 <Project 
   DefaultTargets="Build" 
   ToolsVersion="4.0" 
