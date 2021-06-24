@@ -1,4 +1,6 @@
-[submodule "Mile.Uefi.Playground/lvgl"]
+[submodule "lvgl"]
 	path = Mile.Uefi.Playground/lvgl
 	url = https://github.com/lvgl/lvgl
-	branch = release/v7
+[submodule "Mile.Uefi.Playground/lv_demos"]
+	path = Mile.Uefi.Playground/lv_demos
+	url = https://github.com/lvgl/lv_demos

@@ -204,12 +204,10 @@ extern "C" char* strncpy(char* dest, const char* src, size_t n)
 
 
 #include <lvgl/lvgl.h>
-#include "lv_demo_widgets.h"
-#include "lv_demo_benchmark.h"
-#include "lv_demo_keypad_encoder.h"
+#include <lv_demos/lv_demo.h>
 
 lv_disp_drv_t g_LvglDisplayDriver;
-lv_disp_buf_t g_LvglDisplayBuffer;
+lv_disp_draw_buf_t g_LvglDisplayBuffer;
 lv_color_t g_LvglDisplayRawBuffer[1048576];
 
 lv_indev_drv_t g_LvglPointerDriver;
@@ -217,6 +215,8 @@ lv_indev_t* g_LvglPointerDevice;
 
 lv_indev_drv_t g_LvglKeyboardDriver;
 lv_indev_t* g_LvglKeyboardDevice;
+
+static lv_group_t* volatile g_DefaultGroup = nullptr;
 
 void LvglDisplayDriverFlushCallback(
     lv_disp_drv_t* disp_drv,
@@ -251,32 +251,15 @@ void EFIAPI Timeout(
 EFI_SERIAL_IO_PROTOCOL* g_SerialIoProtocol = nullptr;
 
 void my_log_cb(
-    lv_log_level_t level,
-    const char* file,
-    uint32_t line,
-    const char* fn_name,
-    const char* dsc)
+    const char* buf)
 {
-    const char* log_level_string[] =
-    {
-        "TRACE",
-        "INFO",
-        "WARNING",
-        "ERROR",
-        "USER"
-    };
-
     char buffer[32768];
 
     UINTN length = ::lv_snprintf(
         buffer,
         32768,
-        "%s: File: %s#%d: %s: %s\n",
-        log_level_string[level],
-        file,
-        line,
-        fn_name,
-        dsc);
+        "%s\n",
+        buf);
 
     g_SerialIoProtocol->Write(
         g_SerialIoProtocol,
@@ -316,7 +299,7 @@ EFI_STATUS MileUefiConnectAllControllers()
 
 EFI_SIMPLE_POINTER_PROTOCOL* g_SimplePointerProtocol;
 
-bool win_drv_read(
+void win_drv_read(
     lv_indev_drv_t* indev_drv,
     lv_indev_data_t* data)
 {
@@ -350,15 +333,13 @@ bool win_drv_read(
             data->point.y = g_LvglDisplayDriver.ver_res;
         }
     }
-
-    return false;
 }
 
 extern "C" const lv_img_dsc_t mouse_cursor_icon;
 
 EFI_SIMPLE_TEXT_INPUT_PROTOCOL* g_SimpleTextInputProtocol;
 
-bool win_kb_read(lv_indev_drv_t* indev_drv, lv_indev_data_t* data)
+void win_kb_read(lv_indev_drv_t* indev_drv, lv_indev_data_t* data)
 {
     (void)indev_drv;      /*Unused*/
 
@@ -424,8 +405,6 @@ bool win_kb_read(lv_indev_drv_t* indev_drv, lv_indev_data_t* data)
 
         data->state = LV_INDEV_STATE_PR;
     }
-
-    return false;
 }
 
 EFI_STATUS LvglUefiHalInit()
@@ -524,7 +503,7 @@ EFI_STATUS LvglUefiHalInit()
 
     ::lv_disp_drv_init(&g_LvglDisplayDriver);
 
-    ::lv_disp_buf_init(
+    ::lv_disp_draw_buf_init(
         &g_LvglDisplayBuffer,
         g_LvglDisplayRawBuffer,
         nullptr,
@@ -535,9 +514,12 @@ EFI_STATUS LvglUefiHalInit()
     g_LvglDisplayDriver.ver_res = static_cast<lv_coord_t>(
         g_GraphicsOutputProtocol->Mode->Info->VerticalResolution);
     g_LvglDisplayDriver.flush_cb = ::LvglDisplayDriverFlushCallback;
-    g_LvglDisplayDriver.buffer = &g_LvglDisplayBuffer;
+    g_LvglDisplayDriver.draw_buf = &g_LvglDisplayBuffer;
 
     ::lv_disp_drv_register(&g_LvglDisplayDriver);
+
+    g_DefaultGroup = ::lv_group_create();
+    ::lv_group_set_default(g_DefaultGroup);
 
     Status = g_BootServices->LocateProtocol(
         &gEfiSimplePointerProtocolGuid,
@@ -556,11 +538,12 @@ EFI_STATUS LvglUefiHalInit()
     g_LvglPointerDriver.type = LV_INDEV_TYPE_POINTER;
     g_LvglPointerDriver.read_cb = ::win_drv_read;
     g_LvglPointerDevice = ::lv_indev_drv_register(&g_LvglPointerDriver);
+    ::lv_indev_set_group(g_LvglPointerDevice, g_DefaultGroup);
 
-    lv_obj_t* cursor_obj = lv_img_create(lv_scr_act(), nullptr);
+    lv_obj_t* cursor_obj = lv_img_create(lv_scr_act());
     ::lv_img_set_src(cursor_obj, &mouse_cursor_icon);
     ::lv_indev_set_cursor(g_LvglPointerDevice, cursor_obj);
-
+    
     Status = g_BootServices->LocateProtocol(
         &gEfiSimpleTextInProtocolGuid,
         nullptr,
@@ -578,6 +561,7 @@ EFI_STATUS LvglUefiHalInit()
     g_LvglKeyboardDriver.type = LV_INDEV_TYPE_KEYPAD;
     g_LvglKeyboardDriver.read_cb = ::win_kb_read;
     g_LvglKeyboardDevice = ::lv_indev_drv_register(&g_LvglKeyboardDriver);
+    ::lv_indev_set_group(g_LvglKeyboardDevice, g_DefaultGroup);
 
     return EFI_SUCCESS;
 }
@@ -611,13 +595,13 @@ EFI_STATUS EFIAPI UefiMain(
         ::BugCheck();
     }
 
-    //::lv_demo_widgets();
+    ::lv_demo_widgets();
     //::lv_demo_benchmark();
-    ::lv_demo_keypad_encoder();
+    //::lv_demo_keypad_encoder();
 
     for (;;)
     {
-        ::lv_task_handler();
+        ::lv_timer_handler();
         g_BootServices->Stall(10 * 1000);
     }
 
