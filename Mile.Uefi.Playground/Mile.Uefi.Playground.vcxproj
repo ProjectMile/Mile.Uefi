@@ -5,7 +5,7 @@
     <RootNamespace>Mile.Uefi.Playground</RootNamespace>
     <MileProjectType>UefiApplication</MileProjectType>
   </PropertyGroup>
-  <Import Project="..\Mile.Project.VisualStudio\Mile.Project.Cpp.props" />
+  <Import Project="..\Mile.Project\Mile.Project.props" />
   <ImportGroup Label="PropertySheets">
     <Import Project="..\Mile.Uefi.RuntimeLibrary\Mile.Uefi.RuntimeLibrary.props" />
   </ImportGroup>
@@ -486,5 +486,5 @@
   <ItemGroup>
     <ClCompile Include="Mile.Uefi.Playground.cpp" />
   </ItemGroup>
-  <Import Project="..\Mile.Project.VisualStudio\Mile.Project.Cpp.targets" />
+  <Import Project="..\Mile.Project\Mile.Project.targets" />
 </Project>
