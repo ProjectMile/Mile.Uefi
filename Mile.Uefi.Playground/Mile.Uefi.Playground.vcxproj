@@ -40,11 +40,5 @@
   <ItemGroup>
     <ClCompile Include="Mile.Uefi.Playground.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="LVGL.Core.vcxitems" />
-    <None Include="LVGL.Core.vcxitems.filters" />
-    <None Include="LVGL.Demonstrations.vcxitems" />
-    <None Include="LVGL.Demonstrations.vcxitems.filters" />
-  </ItemGroup>
   <Import Project="..\Mile.Uefi.Project\Mile.Uefi.Project.targets" />
 </Project>
