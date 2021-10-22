@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="lv_demos">
+      <UniqueIdentifier>{fdff07f7-59b2-4353-97c5-764498177fee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\.github">
+      <UniqueIdentifier>{ca9d8820-7160-4e5e-80c8-b27935218030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\docs">
+      <UniqueIdentifier>{679f08a4-5449-491f-b3a1-2455382dd9d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\scripts">
+      <UniqueIdentifier>{9c64de37-7301-4308-8c02-98ba7c89f409}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src">
+      <UniqueIdentifier>{7f56bd97-ac28-483c-9904-d2f0895b94ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_benchmark">
+      <UniqueIdentifier>{a24b77a8-70b2-4e3f-8594-1c37cdc6394e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_benchmark\assets">
+      <UniqueIdentifier>{1abc5c83-16b1-4f27-9b1a-761c74ad230e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_keypad_encoder">
+      <UniqueIdentifier>{79c949b6-7fd6-4c15-9d0e-546f5715711b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_music">
+      <UniqueIdentifier>{d38aba9b-1ab2-48c1-8a21-7a72f7c4846e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_music\assets">
+      <UniqueIdentifier>{e76c61ed-285a-483a-8d03-5a5b203c89ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_music\assets\__pycache__">
+      <UniqueIdentifier>{3b5de0c8-0721-42ae-9e77-c7a1b11a2f31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_stress">
+      <UniqueIdentifier>{e560feb4-e82c-4c88-82a6-6ed31833601b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_stress\assets">
+      <UniqueIdentifier>{6cbfdca6-d9a8-4745-9ea7-b7b1ad93f3c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_widgets">
+      <UniqueIdentifier>{5772d9aa-cdcf-4f93-8cf4-1137a3725840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lv_demos\src\lv_demo_widgets\assets">
+      <UniqueIdentifier>{f836e899-d72f-49dc-9c9c-62b5eb146f83}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lv_demos\src\lv_demo_benchmark\lv_demo_benchmark.h">
+      <Filter>lv_demos\src\lv_demo_benchmark</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_keypad_encoder\lv_demo_keypad_encoder.h">
+      <Filter>lv_demos\src\lv_demo_keypad_encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_music\assets\spectrum_1.h">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_music\assets\spectrum_2.h">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_music\assets\spectrum_3.h">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_music\lv_demo_music.h">
+      <Filter>lv_demos\src\lv_demo_music</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_music\lv_demo_music_list.h">
+      <Filter>lv_demos\src\lv_demo_music</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_music\lv_demo_music_main.h">
+      <Filter>lv_demos\src\lv_demo_music</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_stress\lv_demo_stress.h">
+      <Filter>lv_demos\src\lv_demo_stress</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo_widgets\lv_demo_widgets.h">
+      <Filter>lv_demos\src\lv_demo_widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\src\lv_demo.h">
+      <Filter>lv_demos\src</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\lv_demo.h">
+      <Filter>lv_demos</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_demos\lv_demo_conf_template.h">
+      <Filter>lv_demos</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\assets\img_benchmark_cogwheel_alpha16.c">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\assets\img_benchmark_cogwheel_argb.c">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\assets\img_benchmark_cogwheel_chroma_keyed.c">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\assets\img_benchmark_cogwheel_indexed16.c">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\assets\img_benchmark_cogwheel_rgb.c">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\assets\lv_font_montserrat_12_compr_az.c">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\assets\lv_font_montserrat_16_compr_az.c">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\assets\lv_font_montserrat_28_compr_az.c">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_benchmark\lv_demo_benchmark.c">
+      <Filter>lv_demos\src\lv_demo_benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_keypad_encoder\lv_demo_keypad_encoder.c">
+      <Filter>lv_demos\src\lv_demo_keypad_encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_corner_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_list_pause.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_list_pause_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_list_play.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_list_play_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_loop.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_loop_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_next.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_next_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_pause.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_pause_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_play.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_play_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_prev.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_prev_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_rnd.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_btn_rnd_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_corner_left.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_corner_left_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_corner_right.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_corner_right_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_cover_1.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_cover_1_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_cover_2.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_cover_2_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_cover_3.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_cover_3_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_icon_1.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_icon_1_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_icon_2.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_icon_2_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_icon_3.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_icon_3_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_icon_4.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_icon_4_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_list_border.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_list_border_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_logo.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_slider_knob.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_slider_knob_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_wave_bottom.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_wave_bottom_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_wave_top.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\assets\img_lv_demo_music_wave_top_large.c">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\lv_demo_music.c">
+      <Filter>lv_demos\src\lv_demo_music</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\lv_demo_music_list.c">
+      <Filter>lv_demos\src\lv_demo_music</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_music\lv_demo_music_main.c">
+      <Filter>lv_demos\src\lv_demo_music</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_stress\assets\lv_font_montserrat_12_compr_az.c">
+      <Filter>lv_demos\src\lv_demo_stress\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_stress\assets\lv_font_montserrat_16_compr_az.c">
+      <Filter>lv_demos\src\lv_demo_stress\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_stress\assets\lv_font_montserrat_28_compr_az.c">
+      <Filter>lv_demos\src\lv_demo_stress\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_stress\lv_demo_stress.c">
+      <Filter>lv_demos\src\lv_demo_stress</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_widgets\assets\img_clothes.c">
+      <Filter>lv_demos\src\lv_demo_widgets\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_widgets\assets\img_demo_widgets_avatar.c">
+      <Filter>lv_demos\src\lv_demo_widgets\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_widgets\assets\img_lvgl_logo.c">
+      <Filter>lv_demos\src\lv_demo_widgets\assets</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_demos\src\lv_demo_widgets\lv_demo_widgets.c">
+      <Filter>lv_demos\src\lv_demo_widgets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lv_demos\.github\auto-comment.yml">
+      <Filter>lv_demos\.github</Filter>
+    </None>
+    <None Include="lv_demos\.github\stale.yml">
+      <Filter>lv_demos\.github</Filter>
+    </None>
+    <None Include="lv_demos\docs\LICENSE.md">
+      <Filter>lv_demos\docs</Filter>
+    </None>
+    <None Include="lv_demos\scripts\build_all_examples.sh">
+      <Filter>lv_demos\scripts</Filter>
+    </None>
+    <None Include="lv_demos\scripts\examples.txt">
+      <Filter>lv_demos\scripts</Filter>
+    </None>
+    <None Include="lv_demos\scripts\genexamplestxt.sh">
+      <Filter>lv_demos\scripts</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_benchmark\assets\img_cogwheel_argb.png">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_benchmark\assets\img_cogwheel_chroma_keyed.png">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_benchmark\assets\img_cogwheel_indexed16.png">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_benchmark\assets\img_cogwheel_rgb.png">
+      <Filter>lv_demos\src\lv_demo_benchmark\assets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_benchmark\README.md">
+      <Filter>lv_demos\src\lv_demo_benchmark</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_benchmark\screenshot1.png">
+      <Filter>lv_demos\src\lv_demo_benchmark</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_benchmark\screenshot2.png">
+      <Filter>lv_demos\src\lv_demo_benchmark</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_keypad_encoder\README.md">
+      <Filter>lv_demos\src\lv_demo_keypad_encoder</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_keypad_encoder\screenshot1.gif">
+      <Filter>lv_demos\src\lv_demo_keypad_encoder</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_keypad_encoder\screenshot1.png">
+      <Filter>lv_demos\src\lv_demo_keypad_encoder</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_music\assets\__pycache__\spectrum.cpython-36.pyc">
+      <Filter>lv_demos\src\lv_demo_music\assets\__pycache__</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_music\assets\spectrum.py">
+      <Filter>lv_demos\src\lv_demo_music\assets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_music\README.md">
+      <Filter>lv_demos\src\lv_demo_music</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_music\screenshot1.gif">
+      <Filter>lv_demos\src\lv_demo_music</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_stress\README.md">
+      <Filter>lv_demos\src\lv_demo_stress</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_stress\screenshot1.gif">
+      <Filter>lv_demos\src\lv_demo_stress</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_stress\screenshot1.png">
+      <Filter>lv_demos\src\lv_demo_stress</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_widgets\assets\avatar.png">
+      <Filter>lv_demos\src\lv_demo_widgets\assets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_widgets\assets\clothes.png">
+      <Filter>lv_demos\src\lv_demo_widgets\assets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_widgets\assets\lvgl_logo.png">
+      <Filter>lv_demos\src\lv_demo_widgets\assets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_widgets\lv_demo_widgets.py">
+      <Filter>lv_demos\src\lv_demo_widgets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_widgets\screenshot1.gif">
+      <Filter>lv_demos\src\lv_demo_widgets</Filter>
+    </None>
+    <None Include="lv_demos\src\lv_demo_widgets\screenshot1.png">
+      <Filter>lv_demos\src\lv_demo_widgets</Filter>
+    </None>
+    <None Include="lv_demos\src\header.py">
+      <Filter>lv_demos\src</Filter>
+    </None>
+    <None Include="lv_demos\.git">
+      <Filter>lv_demos</Filter>
+    </None>
+    <None Include="lv_demos\.gitignore">
+      <Filter>lv_demos</Filter>
+    </None>
+    <None Include="lv_demos\CMakeLists.txt">
+      <Filter>lv_demos</Filter>
+    </None>
+    <None Include="lv_demos\library.properties">
+      <Filter>lv_demos</Filter>
+    </None>
+    <None Include="lv_demos\lv_demo.mk">
+      <Filter>lv_demos</Filter>
+    </None>
+    <None Include="lv_demos\README.md">
+      <Filter>lv_demos</Filter>
+    </None>
+  </ItemGroup>
+</Project>
