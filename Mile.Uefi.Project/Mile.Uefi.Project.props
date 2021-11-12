@@ -108,6 +108,7 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <AdditionalOptions>/Oi- %(AdditionalOptions)</AdditionalOptions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
