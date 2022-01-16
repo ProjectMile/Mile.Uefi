@@ -18,8 +18,7 @@
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
-  <Import Project="LVGL.Core.vcxitems" />
-  <Import Project="LVGL.Demonstrations.vcxitems" />
+  <Import Project="LVGL.Portable.vcxitems" />
   <ItemGroup>
     <ClInclude Include="assert.h" />
     <ClInclude Include="intrin.h" />
