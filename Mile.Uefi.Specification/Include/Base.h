@@ -1,4 +1,4 @@
-﻿/** @file
+/** @file
   Root include file for Mde Package Base type modules
 
   This is the include file for any module of type base. Base modules only use
@@ -347,8 +347,8 @@ struct _LIST_ENTRY {
 /// Minimum values for the signed UEFI Data Types
 ///
 #define MIN_INT8   (-0x7F - 1)
-#define MIN_INT16  (-0x7FFF - 1) 
-#define MIN_INT32  (-0x7FFFFFFF - 1) 
+#define MIN_INT16  (-0x7FFF - 1)
+#define MIN_INT32  (-0x7FFFFFFF - 1)
 #define MIN_INT64  (-0x7FFFFFFFFFFFFFFFLL - 1)
 
 #define  BIT0     0x00000001
@@ -1261,6 +1261,47 @@ typedef UINTN RETURN_STATUS;
 **/
 #define SIGNATURE_64(A, B, C, D, E, F, G, H) \
     (SIGNATURE_32 (A, B, C, D) | ((UINT64) (SIGNATURE_32 (E, F, G, H)) << 32))
+
+#if defined(_MSC_EXTENSIONS) && !defined (__INTEL_COMPILER) && !defined (MDE_CPU_EBC)
+  void * _ReturnAddress(void);
+  #pragma intrinsic(_ReturnAddress)
+  /**
+    Get the return address of the calling function.
+
+    Based on intrinsic function _ReturnAddress that provides the address of
+    the instruction in the calling function that will be executed after
+    control returns to the caller.
+
+    @param L    Return Level.
+
+    @return The return address of the calling function or 0 if L != 0.
+
+  **/
+  #define RETURN_ADDRESS(L)     ((L == 0) ? _ReturnAddress() : (VOID *) 0)
+#elif defined (__GNUC__) || defined (__clang__)
+  /**
+    Get the return address of the calling function.
+
+    Based on built-in Function __builtin_return_address that returns
+    the return address of the current function, or of one of its callers.
+
+    @param L    Return Level.
+
+    @return The return address of the calling function.
+
+  **/
+  #define RETURN_ADDRESS(L)     __builtin_return_address (L)
+#else
+  /**
+    Get the return address of the calling function.
+
+    @param L    Return Level.
+
+    @return 0 as compilers don't support this feature.
+
+  **/
+  #define RETURN_ADDRESS(L)     ((VOID *) 0)
+#endif
 
 /**
   Return the number of elements in an array.

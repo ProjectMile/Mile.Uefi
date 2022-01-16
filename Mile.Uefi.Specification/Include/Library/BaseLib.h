@@ -203,20 +203,6 @@ typedef struct {
 // Base Library CPU Functions
 //
 
-/**
-  Function entry point used when a stack switch is requested with SwitchStack()
-
-  @param  Context1        Context1 parameter passed into SwitchStack().
-  @param  Context2        Context2 parameter passed into SwitchStack().
-
-**/
-typedef
-VOID
-(EFIAPI *SWITCH_STACK_ENTRY_POINT)(
-  IN      VOID                      *Context1,  OPTIONAL
-  IN      VOID                      *Context2   OPTIONAL
-  );
-
 #if defined (MDE_CPU_IA32) || defined (MDE_CPU_X64)
 ///
 /// IA32 and x64 Specific Functions.

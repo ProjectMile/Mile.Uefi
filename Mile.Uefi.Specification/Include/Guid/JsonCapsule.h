@@ -1,4 +1,4 @@
-﻿/** @file
+/** @file
 Guid & data structure for tables defined for reporting firmware configuration data to EFI
 Configuration Tables and also for processing JSON payload capsule.
 
