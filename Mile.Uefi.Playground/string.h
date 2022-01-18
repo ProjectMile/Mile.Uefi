@@ -42,6 +42,15 @@ extern "C" {
         char const* _Source,
         size_t _Count);
 
+    char* strchr(
+        const char* s,
+        int c);
+
+    void* memmove(
+        void* dest,
+        const void* src,
+        size_t count);
+
 #ifdef __cplusplus
 }
 #endif // __cplusplus

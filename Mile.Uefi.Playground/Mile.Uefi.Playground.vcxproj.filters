@@ -2,9 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="LVGL.Portable.vcxitems.filters" />
   <ItemGroup>
-    <ClInclude Include="lv_demo_conf.h" />
     <ClInclude Include="assert.h" />
     <ClInclude Include="intrin.h" />
+    <ClInclude Include="time.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lv_conf.h" />

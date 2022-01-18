@@ -22,9 +22,9 @@
   <ItemGroup>
     <ClInclude Include="assert.h" />
     <ClInclude Include="intrin.h" />
+    <ClInclude Include="time.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lv_demo_conf.h" />
     <ClInclude Include="stdio.h" />
     <ClInclude Include="stdlib.h" />
     <ClInclude Include="string.h" />

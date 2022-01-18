@@ -202,9 +202,108 @@ extern "C" char* strncpy(char* dest, const char* src, size_t n)
 }
 
 
+extern "C" void* __cdecl malloc(
+    size_t _Size)
+{
+    void* Block = nullptr;
+
+    g_BootServices->AllocatePool(
+        EFI_MEMORY_TYPE::EfiLoaderData,
+        _Size,
+        &Block);
+
+    return Block;
+}
+
+extern "C" void* __cdecl calloc(
+    size_t _Count,
+    size_t _Size)
+{
+    size_t RealSize = _Count * _Size;
+    void* Block = malloc(RealSize);
+    if (Block)
+    {
+        memset(Block, 0, RealSize);
+    }
+    return Block;
+}
+
+extern "C" void __cdecl free(
+    void* _Block)
+{
+    g_BootServices->FreePool(_Block);
+}
+
+extern "C" char* strchr(const char* s, int c)
+{
+    while (*s != (char)c) {
+        if (!*s)
+            return NULL;
+        s++;
+    }
+
+    return (char*)s;
+}
+
+extern "C" void* memmove(
+    void* dst,
+    const void* src,
+    size_t n)
+{
+    const char* p = (const char*)src;
+    char* q = (char*)dst;
+
+    if (q < p) {
+        while (n--) {
+            *q++ = *p++;
+        }
+    }
+    else {
+        p += n;
+        q += n;
+        while (n--) {
+            *--q = *--p;
+        }
+}
+
+    return dst;
+}
+
+long jrand48(unsigned short xsubi[3])
+{
+    uint64_t x;
+
+    /* The xsubi[] array is littleendian by spec */
+    x = (uint64_t)(uint16_t)xsubi[0] +
+        ((uint64_t)(uint16_t)xsubi[1] << 16) +
+        ((uint64_t)(uint16_t)xsubi[2] << 32);
+
+    x = (0x5deece66dULL * x) + 0xb;
+
+    xsubi[0] = (unsigned short)(uint16_t)x;
+    xsubi[1] = (unsigned short)(uint16_t)(x >> 16);
+    xsubi[2] = (unsigned short)(uint16_t)(x >> 32);
+
+    return (long)(int32_t)(x >> 16);
+}
+
+unsigned short __rand48_seed[3];
+
+extern "C" int rand()
+{
+    return (int32_t)jrand48(__rand48_seed) >> 1;
+}
+
+#include "time.h"
+
+extern "C" time_t time(time_t * arg)
+{
+    return (time_t)-1;
+}
+
 
 #include <lvgl/lvgl.h>
-#include <lv_demos/lv_demo.h>
+#include <lvgl/demos/lv_demos.h>
 
 lv_disp_drv_t g_LvglDisplayDriver;
 lv_disp_draw_buf_t g_LvglDisplayBuffer;
@@ -595,8 +694,8 @@ EFI_STATUS EFIAPI UefiMain(
         ::BugCheck();
     }
 
-    ::lv_demo_widgets();
-    //::lv_demo_benchmark();
+    //::lv_demo_widgets();
+    ::lv_demo_benchmark();
     //::lv_demo_keypad_encoder();
 
     for (;;)
