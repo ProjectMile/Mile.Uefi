@@ -1,7 +1,7 @@
 ﻿#ifndef TIME
 #define TIME
 
-#include <Mile.Uefi.Specification.h>
+#include <stddef.h>
 
 typedef INT64 time_t;
 
