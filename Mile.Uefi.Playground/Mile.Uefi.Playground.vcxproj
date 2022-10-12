@@ -41,7 +41,9 @@
     <ClInclude Include="Mile.Project.Properties.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Mile.Uefi.Playground.cpp" />
+    <ClCompile Include="Mile.Uefi.Playground.cpp">
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
   </ItemGroup>
   <Import Project="..\Mile.Uefi.Project\Mile.Uefi.Project.targets" />
 </Project>
