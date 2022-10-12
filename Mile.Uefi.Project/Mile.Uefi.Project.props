@@ -11,6 +11,16 @@
 <!--
   The documents of specific options in Mile.Project.
 
+  How to define the project type in the "Globals" label property group.
+  If the project is an UEFI Application project.
+    <MileProjectType>UefiApplication</MileProjectType>
+  If the project is an UEFI Boot Service Driver project.
+    <MileProjectType>UefiBootServiceDriver</MileProjectType>
+  If the project is an UEFI ROM project.
+    <MileProjectType>UefiRom</MileProjectType>
+  If the project is an UEFI Runtime Driver project.
+    <MileProjectType>UefiRuntimeDriver</MileProjectType>
+
   How to enable the version information support.
     Copy Mile.Project.Properties.Template.h to the project folder and rename it
     to Mile.Project.Properties.h.
@@ -70,7 +80,10 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>EFI Application</SubSystem>
+      <SubSystem Condition="'$(MileProjectType)'=='UefiApplication'">EFI Application</SubSystem>
+      <SubSystem Condition="'$(MileProjectType)'=='UefiBootServiceDriver'">EFI Boot Service Driver</SubSystem>
+      <SubSystem Condition="'$(MileProjectType)'=='UefiRom'">EFI ROM</SubSystem>
+      <SubSystem Condition="'$(MileProjectType)'=='UefiRuntimeDriver'">EFI Runtime</SubSystem>
       <Driver>Driver</Driver>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
