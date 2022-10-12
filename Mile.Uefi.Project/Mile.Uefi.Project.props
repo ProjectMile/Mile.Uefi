@@ -72,11 +72,25 @@
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
       <AdditionalOptions>/Oi- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateMapFile>true</GenerateMapFile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <Driver>Driver</Driver>
+      <SpecifySectionAttributes>.xdata,D;.pdata,D;%(SpecifySectionAttributes)</SpecifySectionAttributes>
+      <AdditionalOptions>/IGNORE:4001 %(AdditionalOptions)</AdditionalOptions>   
+      <AdditionalOptions>/OPT:ICF=10 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4281 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
     </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
     <ClCompile>
@@ -85,6 +99,10 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalOptions>/Gw %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <MergeSections>.rdata=.data;%(MergeSections)</MergeSections>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -97,7 +115,6 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem Condition="'$(MileProjectType)'=='UefiApplication'">EFI Application</SubSystem>
       <SubSystem Condition="'$(MileProjectType)'=='UefiBootServiceDriver'">EFI Boot Service Driver</SubSystem>
       <SubSystem Condition="'$(MileProjectType)'=='UefiRom'">EFI ROM</SubSystem>
@@ -110,14 +127,6 @@
       <AdditionalIncludeDirectories>$(ProjectDir);$(MSBuildThisFileDirectory);$(UefiApplicationResourceIncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup>
-    <Link>
-      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
-      <GenerateMapFile>true</GenerateMapFile>
-      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <Driver>Driver</Driver>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -129,7 +138,6 @@
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
 </Project>
