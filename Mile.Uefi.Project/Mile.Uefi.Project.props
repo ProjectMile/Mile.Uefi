@@ -61,6 +61,14 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
+      <AdditionalOptions></AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies></AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <BufferSecurityCheck>false</BufferSecurityCheck>
@@ -113,31 +121,19 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ControlFlowGuard>false</ControlFlowGuard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Release'">NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem Condition="'$(MileProjectType)'=='UefiApplication'">EFI Application</SubSystem>
       <SubSystem Condition="'$(MileProjectType)'=='UefiBootServiceDriver'">EFI Boot Service Driver</SubSystem>
       <SubSystem Condition="'$(MileProjectType)'=='UefiRom'">EFI ROM</SubSystem>
       <SubSystem Condition="'$(MileProjectType)'=='UefiRuntimeDriver'">EFI Runtime</SubSystem>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <DataExecutionPrevention></DataExecutionPrevention>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>$(ProjectDir);$(MSBuildThisFileDirectory);$(UefiApplicationResourceIncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
-    <ClCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
-    <ClCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <Link>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-    </Link>
   </ItemDefinitionGroup>
 </Project>
