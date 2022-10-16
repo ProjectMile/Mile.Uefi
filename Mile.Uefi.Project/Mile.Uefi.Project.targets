@@ -24,6 +24,7 @@
   <Target Name="MileUefiSpecificationBuildSource" BeforeTargets="BeforeClCompile">
     <ItemGroup>
       <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\Mile.Uefi.Specification.c" />
+      <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\Mile.Uefi.Specification.cpp" />
     </ItemGroup>
   </Target>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
