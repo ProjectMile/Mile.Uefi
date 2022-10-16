@@ -197,7 +197,6 @@ extern "C" {
 #include <IndustryStandard\ElTorito.h>
 #include <IndustryStandard\Emmc.h>
 #include <IndustryStandard\HighPrecisionEventTimerTable.h>
-#include <IndustryStandard\Hsti.h>
 #include <IndustryStandard\Http11.h>
 #include <IndustryStandard\IoRemappingTable.h>
 #include <IndustryStandard\Ipmi.h>
