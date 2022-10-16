@@ -1,6 +1,6 @@
 ﻿/*
  * PROJECT:   Mouri Internal Library Essentials
- * FILE:      GuidDefinitions.cpp
+ * FILE:      GuidDefinitions_C++.cpp
  * PURPOSE:   Implementation for UEFI Specification GUID C++ definitions
  *
  * LICENSE:   The MIT License

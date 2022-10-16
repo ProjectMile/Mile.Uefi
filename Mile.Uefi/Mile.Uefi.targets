@@ -23,8 +23,8 @@
   </Target>
   <Target Name="MileUefiSpecificationBuildSource" BeforeTargets="BeforeClCompile">
     <ItemGroup>
-      <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\GuidDefinitions.c" />
-      <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\GuidDefinitions.cpp" />
+      <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\GuidDefinitions_C.c" />
+      <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\GuidDefinitions_C++.cpp" />
     </ItemGroup>
   </Target>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,6 +1,6 @@
 ﻿/*
  * PROJECT:   Mouri Internal Library Essentials
- * FILE:      GuidDefinitions.c
+ * FILE:      GuidDefinitions_C.c
  * PURPOSE:   Implementation for UEFI Specification GUID C definitions
  *
  * LICENSE:   The MIT License
