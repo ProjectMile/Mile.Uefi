@@ -1,7 +1,7 @@
 ﻿/*
  * PROJECT:   Mouri Internal Library Essentials
- * FILE:      Mile.Uefi.Specification.c
- * PURPOSE:   Implementation for UEFI Specification GUID C definitions
+ * FILE:      GuidDefinitions.cpp
+ * PURPOSE:   Implementation for UEFI Specification GUID C++ definitions
  *
  * LICENSE:   The MIT License
  *
