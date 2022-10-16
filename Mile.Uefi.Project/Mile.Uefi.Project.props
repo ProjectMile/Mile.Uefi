@@ -58,6 +58,12 @@
     <UefiApplicationResourceIncludePath>$(IncludePath)</UefiApplicationResourceIncludePath>
     <IncludePath></IncludePath>
     <ExternalIncludePath></ExternalIncludePath>
+    <UefiPlatform Condition="'$(Platform)'=='ARM'">ARM</UefiPlatform>
+    <UefiPlatform Condition="'$(Platform)'=='ARM64'">AArch64</UefiPlatform>
+    <UefiPlatform Condition="'$(Platform)'=='Win32'">Ia32</UefiPlatform>
+    <UefiPlatform Condition="'$(Platform)'=='x64'">X64</UefiPlatform>   
+    <IncludePath>$(MSBuildThisFileDirectory)Specification\Include\$(UefiPlatform)\;$(IncludePath)</IncludePath>
+    <IncludePath>$(MSBuildThisFileDirectory)Specification\Include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>

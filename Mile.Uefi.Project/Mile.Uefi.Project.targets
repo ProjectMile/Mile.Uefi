@@ -21,5 +21,10 @@
       <ResourceCompile Condition="Exists('$(ProjectDir)Mile.Project.Properties.h')" Include="$(MSBuildThisFileDirectory)Mile.Project.Version.rc" />
     </ItemGroup>
   </Target>
+  <Target Name="MileUefiSpecificationBuildSource" BeforeTargets="BeforeClCompile">
+    <ItemGroup>
+      <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\Mile.Uefi.Specification.c" />
+    </ItemGroup>
+  </Target>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
