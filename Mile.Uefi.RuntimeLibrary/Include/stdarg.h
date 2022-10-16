@@ -11,7 +11,7 @@
 #ifndef MILE_UEFI_STDARG
 #define MILE_UEFI_STDARG
 
-#include <Mile.Uefi.Specification.h>
+#include <Uefi.h>
 
 #define va_list VA_LIST
 

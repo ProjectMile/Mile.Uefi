@@ -11,7 +11,7 @@
 #ifndef MILE_UEFI_STDINT
 #define MILE_UEFI_STDINT
 
-#include <Mile.Uefi.Specification.h>
+#include <Uefi.h>
 
 typedef INT8             int8_t;
 typedef INT16            int16_t;

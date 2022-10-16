@@ -11,7 +11,7 @@
 #ifndef MILE_UEFI_LIMITS
 #define MILE_UEFI_LIMITS
 
-#include <Mile.Uefi.Specification.h>
+#include <Uefi.h>
 
 #define CHAR_BIT    8
 #define SCHAR_MIN   MIN_INT8

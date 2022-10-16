@@ -24,7 +24,10 @@
 #define _Out_opt_
 #endif
 
-#include <Mile.Uefi.Specification.h>
+#include <Uefi.h>
+#include <Protocol/GraphicsOutput.h>
+#include <Protocol/SerialIo.h>
+#include <Protocol/SimplePointer.h>
 
 #include <stddef.h>
 #include <stdint.h>
@@ -498,7 +501,7 @@ void win_kb_read(lv_indev_drv_t* indev_drv, lv_indev_data_t* data)
             {
                 data->key = InputKey.UnicodeChar;
             }
-            
+
             break;
         }
 
@@ -642,7 +645,7 @@ EFI_STATUS LvglUefiHalInit()
     lv_obj_t* cursor_obj = lv_img_create(lv_scr_act());
     ::lv_img_set_src(cursor_obj, &mouse_cursor_icon);
     ::lv_indev_set_cursor(g_LvglPointerDevice, cursor_obj);
-    
+
     Status = g_BootServices->LocateProtocol(
         &gEfiSimpleTextInProtocolGuid,
         nullptr,

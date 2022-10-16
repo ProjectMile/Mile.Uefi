@@ -11,7 +11,7 @@
 #ifndef MILE_UEFI_STDDEF
 #define MILE_UEFI_STDDEF
 
-#include <Mile.Uefi.Specification.h>
+#include <Uefi.h>
 
 typedef UINTN size_t;
 typedef INTN ptrdiff_t;
