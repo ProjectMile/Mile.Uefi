@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
    PROJECT:   Mouri Internal Library Essentials
-   FILE:      Mile.Uefi.Project.targets
+   FILE:      Mile.Uefi.targets
    PURPOSE:   Definition for Visual Studio C++ Project
 
    LICENSE:   The MIT License

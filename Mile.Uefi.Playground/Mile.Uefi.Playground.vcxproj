@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\Mile.Uefi.Project\Mile.Project.Platform.x86.props" />
-  <Import Project="..\Mile.Uefi.Project\Mile.Project.Platform.x64.props" />
-  <Import Project="..\Mile.Uefi.Project\Mile.Project.Platform.ARM.props" />
-  <Import Project="..\Mile.Uefi.Project\Mile.Project.Platform.ARM64.props" />
+  <Import Project="..\Mile.Uefi\Mile.Project.Platform.x86.props" />
+  <Import Project="..\Mile.Uefi\Mile.Project.Platform.x64.props" />
+  <Import Project="..\Mile.Uefi\Mile.Project.Platform.ARM.props" />
+  <Import Project="..\Mile.Uefi\Mile.Project.Platform.ARM64.props" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CB9EDEC8-3DCA-447C-90F7-204D2073B0AD}</ProjectGuid>
     <RootNamespace>Mile.Uefi.Playground</RootNamespace>
     <MileProjectType>UefiApplication</MileProjectType>
   </PropertyGroup>
-  <Import Project="..\Mile.Uefi.Project\Mile.Uefi.Project.props" />
+  <Import Project="..\Mile.Uefi\Mile.Uefi.props" />
   <ImportGroup Label="PropertySheets">
     <Import Project="..\Mile.Uefi.RuntimeLibrary\Mile.Uefi.RuntimeLibrary.props" />
   </ImportGroup>
@@ -45,5 +45,5 @@
       <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
   </ItemGroup>
-  <Import Project="..\Mile.Uefi.Project\Mile.Uefi.Project.targets" />
+  <Import Project="..\Mile.Uefi\Mile.Uefi.targets" />
 </Project>
