@@ -20,39 +20,10 @@
     <MileProjectType>UefiRom</MileProjectType>
   If the project is an UEFI Runtime Driver project.
     <MileProjectType>UefiRuntimeDriver</MileProjectType>
-
-  How to enable the version information support.
-    Copy Mile.Project.Properties.Template.h to the project folder and rename it
-    to Mile.Project.Properties.h.
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\Mile.Project.Windows\Mile.Project.Cpp.props" />
   <PropertyGroup>
-    <!--
-      Only do this for MSBuild versions below 16.0 as it is since done 
-      automatically, see https://github.com/microsoft/msbuild/pull/3605.
-    -->
-    <MSBuildAllProjects Condition="'$(MSBuildToolsVersion)' &lt;= '15'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-  </PropertyGroup>
-  <PropertyGroup Label="Globals">
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '16.0'">v142</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseDebugLibraries Condition="'$(Configuration)'=='Debug'">true</UseDebugLibraries>
-    <UseDebugLibraries Condition="'$(Configuration)'=='Release'">false</UseDebugLibraries>
-    <WholeProgramOptimization Condition="'$(Configuration)'=='Release'">true</WholeProgramOptimization>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <PropertyGroup>
-    <OutDir>$(SolutionDir)Output\Binaries\$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>$(SolutionDir)Output\Objects\$(Configuration)\$(MSBuildProjectName)\$(Platform)\</IntDir>
-    <GenerateManifest>false</GenerateManifest>
     <TargetExt>.efi</TargetExt>
     <LinkIncremental>false</LinkIncremental>
     <UefiApplicationResourceIncludePath>$(IncludePath)</UefiApplicationResourceIncludePath>
@@ -75,8 +46,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <TreatWarningAsError>true</TreatWarningAsError>
-      <WarningLevel>Level4</WarningLevel>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <ExceptionHandling>false</ExceptionHandling>
@@ -98,14 +67,6 @@
       <AdditionalOptions>/IGNORE:4281 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
     <ClCompile>
       <Optimization>MinSpace</Optimization>
@@ -120,15 +81,10 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <ConformanceMode>true</ConformanceMode>
       <EnableEnhancedInstructionSet Condition="'$(Platform)'=='Win32'">NoExtensions</EnableEnhancedInstructionSet>
       <SDLCheck>false</SDLCheck>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ControlFlowGuard>false</ControlFlowGuard>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)'=='Release'">NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem Condition="'$(MileProjectType)'=='UefiApplication'">EFI Application</SubSystem>
