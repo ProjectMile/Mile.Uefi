@@ -19,6 +19,7 @@
   <Import Project="..\Mile.Project.Windows\Mile.Project.Platform.ARM.props" />
   <Import Project="..\Mile.Project.Windows\Mile.Project.Platform.ARM64.props" />
   <Import Project="..\Mile.Project.Windows\Mile.Project.Cpp.Default.props" />
+  <Import Project="..\Mile.Project.Windows\Mile.Project.Cpp.props" />
   <Import Project="..\Mile.Uefi\Mile.Uefi.props" />
   <ImportGroup Label="PropertySheets">
     <Import Project="..\Mile.Uefi.RuntimeLibrary\Mile.Uefi.RuntimeLibrary.props" />
@@ -55,4 +56,5 @@
     </ClCompile>
   </ItemGroup>
   <Import Project="..\Mile.Uefi\Mile.Uefi.targets" />
+  <Import Project="..\Mile.Project.Windows\Mile.Project.Cpp.targets" />
 </Project>

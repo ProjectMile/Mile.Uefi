@@ -22,7 +22,6 @@
     <MileProjectType>UefiRuntimeDriver</MileProjectType>
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\Mile.Project.Windows\Mile.Project.Cpp.props" />
   <PropertyGroup>
     <TargetExt>.efi</TargetExt>
     <LinkIncremental>false</LinkIncremental>

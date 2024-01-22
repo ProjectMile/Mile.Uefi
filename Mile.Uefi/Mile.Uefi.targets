@@ -15,5 +15,4 @@
       <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\GuidDefinitions_C++.cpp" />
     </ItemGroup>
   </Target>
-  <Import Project="..\Mile.Project.Windows\Mile.Project.Cpp.targets" />
 </Project>
