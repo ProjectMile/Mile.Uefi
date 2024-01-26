@@ -81,7 +81,6 @@
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
-      <MergeSections>.rdata=.data;%(MergeSections)</MergeSections>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
