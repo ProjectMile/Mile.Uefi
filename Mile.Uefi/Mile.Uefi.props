@@ -23,7 +23,10 @@
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <TargetExt>.efi</TargetExt>
+    <TargetExt Condition="'$(MileProjectType)'=='UefiApplication'">.efi</TargetExt>
+    <TargetExt Condition="'$(MileProjectType)'=='UefiBootServiceDriver'">.efi</TargetExt>
+    <TargetExt Condition="'$(MileProjectType)'=='UefiRom'">.efi</TargetExt>
+    <TargetExt Condition="'$(MileProjectType)'=='UefiRuntimeDriver'">.efi</TargetExt>
     <LinkIncremental>false</LinkIncremental>
     <UefiApplicationResourceIncludePath>$(IncludePath)</UefiApplicationResourceIncludePath>
     <IncludePath></IncludePath>
