@@ -29,8 +29,8 @@
     <TargetExt Condition="'$(MileProjectType)'=='UefiRuntimeDriver'">.efi</TargetExt>
     <LinkIncremental>false</LinkIncremental>
     <UefiApplicationResourceIncludePath>$(IncludePath)</UefiApplicationResourceIncludePath>
-    <IncludePath></IncludePath>
-    <ExternalIncludePath></ExternalIncludePath>
+    <IncludePath>$(IncludePath.Replace('$(VC_IncludePath);', ''))</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath.Replace('$(VC_IncludePath);', ''))</ExternalIncludePath>
     <UefiPlatform Condition="'$(Platform)'=='ARM'">ARM</UefiPlatform>
     <UefiPlatform Condition="'$(Platform)'=='ARM64'">AArch64</UefiPlatform>
     <UefiPlatform Condition="'$(Platform)'=='Win32'">Ia32</UefiPlatform>
