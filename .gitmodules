@@ -1,6 +1,3 @@
-[submodule "lvgl"]
-	path = Mile.Uefi.Playground/lvgl
-	url = https://github.com/lvgl/lvgl
 [submodule "Mile.Project.Windows"]
 	path = Mile.Project.Windows
 	url = https://github.com/ProjectMile/Mile.Project.Windows
