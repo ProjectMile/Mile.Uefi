@@ -648,7 +648,7 @@ typedef struct {
       //
       // number of elements is PageCount
       //
-      UINT64    Pages[1];
+      UINT64    Pages[];
     } LogBuffer;
     //
     // bitmap of EVENT_TYPE

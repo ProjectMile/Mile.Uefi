@@ -12,6 +12,16 @@
 
 #include <IndustryStandard/Acpi60.h>
 
+///
+/// _PSD Revision for ACPI 6.1
+///
+#define EFI_ACPI_6_1_AML_PSD_REVISION  0
+
+///
+/// _CPC Revision for ACPI 6.1
+///
+#define EFI_ACPI_6_1_AML_CPC_REVISION  2
+
 //
 // Ensure proper structure formats
 //
@@ -977,7 +987,7 @@ typedef struct {
   EFI_ACPI_6_1_PMMT_COMMON_MEMORY_AGGREGATOR_DEVICE_STRUCTURE    Header;
   UINT16                                                         SocketIdentifier;
   UINT16                                                         Reserved;
-  // EFI_ACPI_6_1_PMMT_MEMORY_CONTROLLER_MEMORY_AGGREGATOR_DEVICE_STRUCTURE  MemoryController[1];
+  // EFI_ACPI_6_1_PMMT_MEMORY_CONTROLLER_MEMORY_AGGREGATOR_DEVICE_STRUCTURE  MemoryController[];
 } EFI_ACPI_6_1_PMMT_SOCKET_MEMORY_AGGREGATOR_DEVICE_STRUCTURE;
 
 ///
@@ -994,7 +1004,7 @@ typedef struct {
   UINT16                                                         Reserved;
   UINT16                                                         NumberOfProximityDomains;
   // UINT32                                                       ProximityDomain[NumberOfProximityDomains];
-  // EFI_ACPI_6_1_PMMT_DIMM_MEMORY_AGGREGATOR_DEVICE_STRUCTURE    PhysicalComponent[1];
+  // EFI_ACPI_6_1_PMMT_DIMM_MEMORY_AGGREGATOR_DEVICE_STRUCTURE    PhysicalComponent[];
 } EFI_ACPI_6_1_PMMT_MEMORY_CONTROLLER_MEMORY_AGGREGATOR_DEVICE_STRUCTURE;
 
 ///
@@ -1465,7 +1475,7 @@ typedef struct {
   UINT16    Type;
   UINT16    Length;
   UINT32    Reserved_4;
-  // UINT8                                       Data[1];
+  // UINT8                                       Data[];
 } EFI_ACPI_6_1_NFIT_SMBIOS_MANAGEMENT_INFORMATION_STRUCTURE;
 
 //

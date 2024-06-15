@@ -124,7 +124,7 @@ typedef struct {
   ///
   /// Array of EFI_SYSTEM_RESOURCE_ENTRY
   ///
-  // EFI_SYSTEM_RESOURCE_ENTRY  Entries[1];
+  // EFI_SYSTEM_RESOURCE_ENTRY  Entries[];
 } EFI_SYSTEM_RESOURCE_TABLE;
 
 extern EFI_GUID  gEfiSystemResourceTableGuid;

@@ -150,8 +150,8 @@ typedef struct _EFI_HII_SIMPLE_FONT_PACKAGE_HDR {
   EFI_HII_PACKAGE_HEADER    Header;
   UINT16                    NumberOfNarrowGlyphs;
   UINT16                    NumberOfWideGlyphs;
-  // EFI_NARROW_GLYPH       NarrowGlyphs[1];
-  // EFI_WIDE_GLYPH         WideGlyphs[1];
+  // EFI_NARROW_GLYPH       NarrowGlyphs[];
+  // EFI_WIDE_GLYPH         WideGlyphs[];
 } EFI_HII_SIMPLE_FONT_PACKAGE_HDR;
 
 //
@@ -303,7 +303,7 @@ typedef struct _EFI_HII_GIBT_SKIP2_BLOCK {
 ///
 typedef struct _EFI_HII_DEVICE_PATH_PACKAGE_HDR {
   EFI_HII_PACKAGE_HEADER    Header;
-  // EFI_DEVICE_PATH_PROTOCOL DevicePath[1];
+  // EFI_DEVICE_PATH_PROTOCOL DevicePath[];
 } EFI_HII_DEVICE_PATH_PACKAGE_HDR;
 
 //
@@ -683,7 +683,7 @@ typedef union {
   EFI_HII_DATE     date;
   EFI_STRING_ID    string; ///< EFI_IFR_TYPE_STRING, EFI_IFR_TYPE_ACTION
   EFI_HII_REF      ref;    ///< EFI_IFR_TYPE_REF
-  // UINT8 buffer[1];      ///< EFI_IFR_TYPE_BUFFER
+  // UINT8 buffer[];      ///< EFI_IFR_TYPE_BUFFER
 } EFI_IFR_TYPE_VALUE;
 
 //
@@ -879,7 +879,7 @@ typedef struct _EFI_IFR_FORM_SET {
   EFI_STRING_ID        FormSetTitle;
   EFI_STRING_ID        Help;
   UINT8                Flags;
-  // EFI_GUID              ClassGuid[1];
+  // EFI_GUID              ClassGuid[];
 } EFI_IFR_FORM_SET;
 
 typedef struct _EFI_IFR_END {
@@ -1515,7 +1515,7 @@ typedef struct _EFI_IFR_FORM_MAP {
   ///
   /// One or more configuration method's name and unique identifier.
   ///
-  // EFI_IFR_FORM_MAP_METHOD  Methods[1];
+  // EFI_IFR_FORM_MAP_METHOD  Methods[];
 } EFI_IFR_FORM_MAP;
 
 typedef struct _EFI_IFR_SET {
@@ -1696,7 +1696,17 @@ typedef enum {
   EfiKeyF12,
   EfiKeyPrint,
   EfiKeySLck,
-  EfiKeyPause
+  EfiKeyPause,
+  EfiKeyIntl0,
+  EfiKeyIntl1,
+  EfiKeyIntl2,
+  EfiKeyIntl3,
+  EfiKeyIntl4,
+  EfiKeyIntl5,
+  EfiKeyIntl6,
+  EfiKeyIntl7,
+  EfiKeyIntl8,
+  EfiKeyIntl9
 } EFI_KEY;
 
 typedef struct {
@@ -1754,13 +1764,13 @@ typedef struct {
   EFI_GUID    Guid;
   UINT32      LayoutDescriptorStringOffset;
   UINT8       DescriptorCount;
-  // EFI_KEY_DESCRIPTOR    Descriptors[1];
+  // EFI_KEY_DESCRIPTOR    Descriptors[];
 } EFI_HII_KEYBOARD_LAYOUT;
 
 typedef struct {
   EFI_HII_PACKAGE_HEADER    Header;
   UINT16                    LayoutCount;
-  // EFI_HII_KEYBOARD_LAYOUT Layout[1];
+  // EFI_HII_KEYBOARD_LAYOUT Layout[];
 } EFI_HII_KEYBOARD_PACKAGE_HDR;
 
 //
@@ -1854,7 +1864,7 @@ typedef struct _EFI_HII_ANIMATION_PACKAGE_HDR {
 ///
 typedef struct _EFI_HII_ANIMATION_BLOCK {
   UINT8    BlockType;
-  // UINT8  BlockBody[1];
+  // UINT8  BlockBody[];
 } EFI_HII_ANIMATION_BLOCK;
 
 ///

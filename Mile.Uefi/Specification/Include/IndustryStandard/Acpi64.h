@@ -12,6 +12,16 @@
 
 #include <IndustryStandard/Acpi63.h>
 
+///
+/// _PSD Revision for ACPI 6.4
+///
+#define EFI_ACPI_6_4_AML_PSD_REVISION  0
+
+///
+/// _CPC Revision for ACPI 6.4
+///
+#define EFI_ACPI_6_4_AML_CPC_REVISION  3
+
 //
 // Ensure proper structure formats
 //
@@ -1068,7 +1078,7 @@ typedef struct {
   UINT16    Flags;
   UINT16    Reserved1;
   UINT32    NumberOfMemoryDevices;
-  // UINT8                                   TypeSpecificData[1];
+  // UINT8                                   TypeSpecificData[];
   // EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE  MemoryDeviceStructure[NumberOfMemoryDevices];
 } EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE;
 
@@ -1087,7 +1097,7 @@ typedef struct {
   EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE    CommonMemoryDeviceHeader;
   UINT16                                    SocketIdentifier;
   UINT16                                    Reserved;
-  // EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE  MemoryDeviceStructure[1];
+  // EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE  MemoryDeviceStructure[];
 } EFI_ACPI_6_4_PMTT_SOCKET_TYPE_DATA;
 
 ///
@@ -1097,7 +1107,7 @@ typedef struct {
   EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE    CommonMemoryDeviceHeader;
   UINT16                                    MemoryControllerIdentifier;
   UINT16                                    Reserved;
-  // EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE  MemoryDeviceStructure[1];
+  // EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE  MemoryDeviceStructure[];
 } EFI_ACPI_6_4_PMTT_MEMORY_CONTROLLER_TYPE_DATA;
 
 ///
@@ -1114,8 +1124,8 @@ typedef struct {
 typedef struct {
   EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE    CommonMemoryDeviceHeader;
   UINT8                                     TypeUuid[16];
-  // EFI_ACPI_6_4_PMTT_VENDOR_SPECIFIC_TYPE_DATA   VendorSpecificData[1];
-  // EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE        MemoryDeviceStructure[1];
+  // EFI_ACPI_6_4_PMTT_VENDOR_SPECIFIC_TYPE_DATA   VendorSpecificData[];
+  // EFI_ACPI_6_4_PMTT_COMMON_MEMORY_DEVICE        MemoryDeviceStructure[];
 } EFI_ACPI_6_4_PMTT_VENDOR_SPECIFIC_TYPE_DATA;
 
 ///
@@ -1590,7 +1600,7 @@ typedef struct {
   UINT16    Type;
   UINT16    Length;
   UINT32    Reserved_4;
-  // UINT8                                       Data[1];
+  // UINT8                                       Data[];
 } EFI_ACPI_6_4_NFIT_SMBIOS_MANAGEMENT_INFORMATION_STRUCTURE;
 
 //
@@ -2579,7 +2589,7 @@ typedef struct {
 ///
 typedef struct {
   UINT32    Signature;
-  // UINT8       CommunicationSubspace[1];
+  // UINT8       CommunicationSubspace[];
 } EFI_6_4_PCCT_REDUCED_PCC_SUBSPACE_SHARED_MEMORY_REGION;
 
 ///
@@ -2764,7 +2774,7 @@ typedef struct {
 ///
 typedef struct {
   EFI_ACPI_DESCRIPTION_HEADER    Header;
-  // UINT8                         PlatformTelemetryRecords[1];
+  // UINT8                         PlatformTelemetryRecords[];
 } EFI_ACPI_6_4_PLATFORM_HEALTH_ASSESSMENT_TABLE;
 
 #define EFI_ACPI_6_4_PLATFORM_HEALTH_ASSESSMENT_TABLE_REVISION  0x01
@@ -2776,7 +2786,7 @@ typedef struct {
   UINT16    PlatformHealthAssessmentRecordType;
   UINT16    RecordLength;
   UINT8     Revision;
-  // UINT8   Data[1];
+  // UINT8   Data[];
 } EFI_ACPI_6_4_PHAT_RECORD;
 
 ///
@@ -2803,7 +2813,7 @@ typedef struct {
   UINT8     Revision;
   UINT8     Reserved[3];
   UINT32    RecordCount;
-  // UINT8   PhatVersionElement[1];
+  // UINT8   PhatVersionElement[];
 } EFI_ACPI_6_4_PHAT_FIRMWARE_VERISON_DATA_RECORD;
 
 #define EFI_ACPI_6_4_PHAT_FIRMWARE_VERSION_DATA_RECORD_REVISION  0x01
@@ -2819,8 +2829,8 @@ typedef struct {
   UINT8     AmHealthy;
   GUID      DeviceSignature;
   UINT32    DeviceSpecificDataOffset;
-  // UINT8   DevicePath[1];
-  // UINT8   DeviceSpecificData[1];
+  // UINT8   DevicePath[];
+  // UINT8   DeviceSpecificData[];
 } EFI_ACPI_6_4_PHAT_FIRMWARE_HEALTH_DATA_RECORD_STRUCTURE;
 
 #define EFI_ACPI_6_4_PHAT_FIRMWARE_HEALTH_DATA_RECORD_REVISION  0x01
@@ -2846,6 +2856,11 @@ typedef struct {
 /// "APIC" Multiple APIC Description Table
 ///
 #define EFI_ACPI_6_4_MULTIPLE_APIC_DESCRIPTION_TABLE_SIGNATURE  SIGNATURE_32('A', 'P', 'I', 'C')
+
+///
+/// "APMT" Arm Performance Monitoring Unit Table
+///
+#define EFI_ACPI_6_4_ARM_PERFORMANCE_MONITORING_UNIT_TABLE_SIGNATURE  SIGNATURE_32('A', 'P', 'M', 'T')
 
 ///
 /// "BERT" Boot Error Record Table

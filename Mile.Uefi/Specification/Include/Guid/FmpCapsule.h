@@ -42,7 +42,7 @@ typedef struct {
   /// Variable length array of dimension [EmbeddedDriverCount + PayloadItemCount]
   /// containing offsets of each of the drivers and payload items contained within the capsule
   ///
-  // UINT64 ItemOffsetList[1];
+  // UINT64 ItemOffsetList[];
 } EFI_FIRMWARE_MANAGEMENT_CAPSULE_HEADER;
 
 typedef struct {

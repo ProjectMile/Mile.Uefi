@@ -76,7 +76,7 @@ typedef struct {
   /// In case of capsule submitted directly to UpdateCapsule() there is no file name, and this field is required to contain a single 16-bit zero character
   ///  which is included in VariableTotalSize.
   ///
-  /// CHAR16 CapsuleFileName[1];
+  /// CHAR16 CapsuleFileName[];
   ///
 
   ///
@@ -84,7 +84,7 @@ typedef struct {
   /// (if present). In case where device path is not present and the target is not otherwise known to firmware, or when payload was blocked by policy, or skipped,
   /// this field is required to contain a single 16-bit zero character which is included in VariableTotalSize.
   ///
-  /// CHAR16 CapsuleTarget[1];
+  /// CHAR16 CapsuleTarget[];
   ///
 } EFI_CAPSULE_RESULT_VARIABLE_FMP;
 
@@ -114,7 +114,7 @@ typedef struct {
   /// capsule to system. The definition of the JSON schema used in the replied payload is beyond
   /// the scope of this specification.
   ///
-  UINT8     Resp[1];
+  UINT8     Resp[];
 } EFI_CAPSULE_RESULT_VARIABLE_JSON;
 
 extern EFI_GUID  gEfiCapsuleReportGuid;

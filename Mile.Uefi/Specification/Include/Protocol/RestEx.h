@@ -1,4 +1,4 @@
-﻿/** @file
+/** @file
   This file defines the EFI REST EX Protocol interface. It is
   split into the following two main sections.
 
@@ -131,7 +131,8 @@ typedef struct {
   response when the data is retrieved from the service. RequestMessage contains the HTTP
   request to the REST resource identified by RequestMessage.Request.Url. The
   ResponseMessage is the returned HTTP response for that request, including any HTTP
-  status.
+  status. It's caller's responsibility to free this ResponseMessage using FreePool().
+  RestConfigFreeHttpMessage() in RedfishLib is an example to release ResponseMessage structure.
 
   @param[in]  This                Pointer to EFI_REST_EX_PROTOCOL instance for a particular
                                   REST service.
@@ -145,7 +146,7 @@ typedef struct {
 **/
 typedef
 EFI_STATUS
-(EFIAPI *EFI_REST_EX_SEND_RECEIVE)(
+(EFIAPI *EFI_REST_SEND_RECEIVE)(
   IN      EFI_REST_EX_PROTOCOL   *This,
   IN      EFI_HTTP_MESSAGE       *RequestMessage,
   OUT     EFI_HTTP_MESSAGE       *ResponseMessage
@@ -175,7 +176,7 @@ EFI_STATUS
 **/
 typedef
 EFI_STATUS
-(EFIAPI *EFI_REST_EX_GET_TIME)(
+(EFIAPI *EFI_REST_GET_TIME)(
   IN      EFI_REST_EX_PROTOCOL   *This,
   OUT     EFI_TIME               *Time
   );
@@ -375,8 +376,8 @@ EFI_STATUS
 /// interface after the corresponding configuration is initialized.
 ///
 struct _EFI_REST_EX_PROTOCOL {
-  EFI_REST_EX_SEND_RECEIVE             SendReceive;
-  EFI_REST_EX_GET_TIME                 GetServiceTime;
+  EFI_REST_SEND_RECEIVE             SendReceive;
+  EFI_REST_GET_TIME                 GetServiceTime;
   EFI_REST_EX_GET_SERVICE           GetService;
   EFI_REST_EX_GET_MODE_DATA         GetModeData;
   EFI_REST_EX_CONFIGURE             Configure;

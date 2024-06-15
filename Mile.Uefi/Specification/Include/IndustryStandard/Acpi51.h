@@ -13,6 +13,16 @@
 
 #include <IndustryStandard/Acpi50.h>
 
+///
+/// _PSD Revision for ACPI 5.1
+///
+#define EFI_ACPI_5_1_AML_PSD_REVISION  0
+
+///
+/// _CPC Revision for ACPI 5.1
+///
+#define EFI_ACPI_5_1_AML_CPC_REVISION  2
+
 //
 // Ensure proper structure formats
 //
@@ -962,7 +972,7 @@ typedef struct {
   EFI_ACPI_5_1_PMMT_COMMON_MEMORY_AGGREGATOR_DEVICE_STRUCTURE    Header;
   UINT16                                                         SocketIdentifier;
   UINT16                                                         Reserved;
-  // EFI_ACPI_5_1_PMMT_MEMORY_CONTROLLER_MEMORY_AGGREGATOR_DEVICE_STRUCTURE  MemoryController[1];
+  // EFI_ACPI_5_1_PMMT_MEMORY_CONTROLLER_MEMORY_AGGREGATOR_DEVICE_STRUCTURE  MemoryController[];
 } EFI_ACPI_5_1_PMMT_SOCKET_MEMORY_AGGREGATOR_DEVICE_STRUCTURE;
 
 ///
@@ -979,7 +989,7 @@ typedef struct {
   UINT16                                                         Reserved;
   UINT16                                                         NumberOfProximityDomains;
   // UINT32                                                       ProximityDomain[NumberOfProximityDomains];
-  // EFI_ACPI_5_1_PMMT_DIMM_MEMORY_AGGREGATOR_DEVICE_STRUCTURE    PhysicalComponent[1];
+  // EFI_ACPI_5_1_PMMT_DIMM_MEMORY_AGGREGATOR_DEVICE_STRUCTURE    PhysicalComponent[];
 } EFI_ACPI_5_1_PMMT_MEMORY_CONTROLLER_MEMORY_AGGREGATOR_DEVICE_STRUCTURE;
 
 ///

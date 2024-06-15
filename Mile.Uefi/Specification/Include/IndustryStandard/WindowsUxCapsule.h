@@ -20,7 +20,7 @@ typedef struct {
   UINT32    Mode;
   UINT32    OffsetX;
   UINT32    OffsetY;
-  // UINT8  Image[1];
+  // UINT8  Image[];
 } DISPLAY_DISPLAY_PAYLOAD;
 
 typedef struct {

@@ -53,7 +53,7 @@ typedef struct {
   /// Variable length buffer containing the JSON payload that should be parsed and applied to the system. The
   /// definition of the JSON schema used in the payload is beyond the scope of this specification.
   ///
-  UINT8     Payload[1];
+  UINT8     Payload[];
 } EFI_JSON_CAPSULE_HEADER;
 
 typedef struct {
@@ -66,7 +66,7 @@ typedef struct {
   /// Variable length buffer containing the JSON payload that describes one group of configuration data within
   /// current system. The definition of the JSON schema used in this payload is beyond the scope of this specification.
   ///
-  UINT8     ConfigData[1];
+  UINT8     ConfigData[];
 } EFI_JSON_CONFIG_DATA_ITEM;
 
 typedef struct {
@@ -83,7 +83,7 @@ typedef struct {
   ///
   /// Array of configuration data groups.
   ///
-  EFI_JSON_CONFIG_DATA_ITEM    ConfigDataList[1];
+  EFI_JSON_CONFIG_DATA_ITEM    ConfigDataList[];
 } EFI_JSON_CAPSULE_CONFIG_DATA;
 
 #pragma pack()

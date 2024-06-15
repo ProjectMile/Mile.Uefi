@@ -111,7 +111,7 @@ typedef struct {
   /// from the total length of the certificate as found in
   /// Hdr.dwLength.
   ///
-  /// UINT8 Signature[1];
+  /// UINT8 Signature[];
   ///
 } WIN_CERTIFICATE_EFI_PKCS1_15;
 

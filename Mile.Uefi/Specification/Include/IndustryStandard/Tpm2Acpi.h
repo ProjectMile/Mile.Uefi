@@ -26,7 +26,7 @@ typedef struct {
   UINT32                         Flags;
   UINT64                         AddressOfControlArea;
   UINT32                         StartMethod;
-  // UINT8                       PlatformSpecificParameters[1];  // size up to 12
+  // UINT8                       PlatformSpecificParameters[];  // size up to 12
   // UINT32                      Laml;                          // Optional
   // UINT64                      Lasa;                          // Optional
 } EFI_TPM2_ACPI_TABLE;

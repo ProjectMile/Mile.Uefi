@@ -76,7 +76,7 @@ typedef struct {
   ///
   /// CHAP Initiator Secret.
   ///
-  /// UINT8            ChapSecret[1];
+  /// UINT8            ChapSecret[];
   ///
   /// CHAP Initiator Name Length in bytes on offset ChapSecret + ChapSecretLength.
   ///
@@ -84,7 +84,7 @@ typedef struct {
   ///
   /// CHAP Initiator Name.
   ///
-  /// UINT8            ChapName[1];
+  /// UINT8            ChapName[];
   ///
   /// Reverse CHAP Name Length in bytes on offset ChapName + ChapNameLength.
   ///
@@ -92,7 +92,7 @@ typedef struct {
   ///
   /// Reverse CHAP Name.
   ///
-  /// UINT8            ReverseChapName[1];
+  /// UINT8            ReverseChapName[];
   ///
   /// Reverse CHAP Secret Length in bytes on offseet ReverseChapName + ReverseChapNameLength.
   ///
@@ -100,7 +100,7 @@ typedef struct {
   ///
   /// Reverse CHAP Secret.
   ///
-  /// UINT8            ReverseChapSecret[1];
+  /// UINT8            ReverseChapSecret[];
   ///
 } CHAP_RADIUS_AUTH_NODE;
 
@@ -129,7 +129,7 @@ typedef struct {
   ///
   /// User Name.
   ///
-  /// UINT8            UserName[1];
+  /// UINT8            UserName[];
   ///
   /// CHAP Initiator Secret Length in bytes on offset UserName + UserNameLength.
   ///
@@ -137,7 +137,7 @@ typedef struct {
   ///
   /// CHAP Initiator Secret.
   ///
-  /// UINT8            ChapSecret[1];
+  /// UINT8            ChapSecret[];
   ///
   /// CHAP Initiator Name Length in bytes on offset ChapSecret + ChapSecretLength.
   ///
@@ -145,7 +145,7 @@ typedef struct {
   ///
   /// CHAP Initiator Name.
   ///
-  /// UINT8            ChapName[1];
+  /// UINT8            ChapName[];
   ///
   /// Reverse CHAP Name Length in bytes on offset ChapName + ChapNameLength.
   ///
@@ -153,7 +153,7 @@ typedef struct {
   ///
   /// Reverse CHAP Name.
   ///
-  /// UINT8            ReverseChapName[1];
+  /// UINT8            ReverseChapName[];
   ///
   /// Reverse CHAP Secret Length in bytes on offset ReverseChapName + ReverseChapNameLength.
   ///
@@ -161,7 +161,7 @@ typedef struct {
   ///
   /// Reverse CHAP Secret.
   ///
-  /// UINT8            ReverseChapSecret[1];
+  /// UINT8            ReverseChapSecret[];
   ///
 } CHAP_LOCAL_AUTH_NODE;
 #pragma pack()

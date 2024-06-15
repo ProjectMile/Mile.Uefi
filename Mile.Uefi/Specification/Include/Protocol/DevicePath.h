@@ -838,6 +838,26 @@ typedef struct {
 } NVME_NAMESPACE_DEVICE_PATH;
 
 ///
+/// NVMe over Fabric (NVMe-oF) Namespace Device Path SubType.
+///
+#define MSG_NVME_OF_NAMESPACE_DP  0x22
+typedef struct {
+  EFI_DEVICE_PATH_PROTOCOL    Header;
+  ///
+  /// Namespace Identifier Type (NIDT)
+  ///
+  UINT8                       NamespaceIdType;
+  ///
+  /// Namespace Identifier (NID)
+  ///
+  UINT8                       NamespaceId[16];
+  ///
+  /// Unique identifier of an NVM subsystem
+  ///
+  CHAR8                       SubsystemNqn[];
+} NVME_OF_NAMESPACE_DEVICE_PATH;
+
+///
 /// DNS Device Path SubType
 ///
 #define MSG_DNS_DP  0x1F
@@ -850,7 +870,7 @@ typedef struct {
   ///
   /// Instance of the DNS server address.
   ///
-  EFI_IP_ADDRESS              DnsServerIp[1];
+  EFI_IP_ADDRESS              DnsServerIp[];
 } DNS_DEVICE_PATH;
 
 ///
@@ -862,7 +882,7 @@ typedef struct {
   ///
   /// Instance of the URI pursuant to RFC 3986.
   ///
-  CHAR8                       Uri[1];
+  CHAR8                       Uri[];
 } URI_DEVICE_PATH;
 
 ///
@@ -1287,6 +1307,7 @@ typedef union {
   SAS_DEVICE_PATH                            Sas;
   SASEX_DEVICE_PATH                          SasEx;
   NVME_NAMESPACE_DEVICE_PATH                 NvmeNamespace;
+  NVME_OF_NAMESPACE_DEVICE_PATH              NvmeOfNamespace;
   DNS_DEVICE_PATH                            Dns;
   URI_DEVICE_PATH                            Uri;
   BLUETOOTH_DEVICE_PATH                      Bluetooth;
@@ -1343,6 +1364,7 @@ typedef union {
   SAS_DEVICE_PATH                            *Sas;
   SASEX_DEVICE_PATH                          *SasEx;
   NVME_NAMESPACE_DEVICE_PATH                 *NvmeNamespace;
+  NVME_OF_NAMESPACE_DEVICE_PATH              *NvmeOfNamespace;
   DNS_DEVICE_PATH                            *Dns;
   URI_DEVICE_PATH                            *Uri;
   BLUETOOTH_DEVICE_PATH                      *Bluetooth;

@@ -1,7 +1,7 @@
 /** @file
   Image signature database are defined for the signed image validation.
 
-  Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2009 - 2024, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent
 
   @par Revision Reference:
@@ -40,6 +40,9 @@
 
 #define SETUP_MODE  1
 #define USER_MODE   0
+
+#define DEVICE_AUTH_BOOT_MODE_ENABLE   1
+#define DEVICE_AUTH_BOOT_MODE_DISABLE  0
 
 // ***********************************************************************
 // Signature Database
@@ -297,7 +300,7 @@ typedef struct {
   /// null-terminated, user-friendly name for the device. If the image was for an application,
   /// then this is the name of the application. If this cannot be determined, then a simple
   /// NULL character should be put in this position.
-  /// CHAR16                    Name[1];
+  /// CHAR16                    Name[];
   ///
 
   ///
