@@ -1,4 +1,4 @@
-﻿/** @file
+/** @file
   Provides string functions, linked list functions, math functions, synchronization
   functions, file path functions, and CPU architecture-specific functions.
 
@@ -59,26 +59,6 @@ typedef struct {
 #define BASE_LIBRARY_JUMP_BUFFER_ALIGNMENT  8
 
 #endif // defined (MDE_CPU_X64)
-
-#if defined (MDE_CPU_ARM)
-
-typedef struct {
-  UINT32    R3;  ///< A copy of R13.
-  UINT32    R4;
-  UINT32    R5;
-  UINT32    R6;
-  UINT32    R7;
-  UINT32    R8;
-  UINT32    R9;
-  UINT32    R10;
-  UINT32    R11;
-  UINT32    R12;
-  UINT32    R14;
-} BASE_LIBRARY_JUMP_BUFFER;
-
-#define BASE_LIBRARY_JUMP_BUFFER_ALIGNMENT  4
-
-#endif // defined (MDE_CPU_ARM)
 
 #if defined (MDE_CPU_AARCH64)
 typedef struct {

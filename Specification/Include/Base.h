@@ -59,7 +59,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 /// up to the compiler to remove any code past that point.
 ///
 #define UNREACHABLE()  __builtin_unreachable ()
-  #elif defined (__has_feature)
+  #elif defined (__has_builtin) && defined (__has_feature)
     #if __has_builtin (__builtin_unreachable)
 ///
 /// Signal compilers and analyzers that this call is not reachable.  It is
@@ -309,16 +309,14 @@ struct _LIST_ENTRY {
 ///
 /// NULL pointer (VOID *)
 ///
-#ifndef NULL
 #if defined (__cplusplus)
-#if defined (_MSC_EXTENSIONS)
+  #if defined (_MSC_EXTENSIONS)
 #define NULL  nullptr
-#else
+  #else
 #define NULL  __null
-#endif
+  #endif
 #else
 #define NULL  ((VOID *) 0)
-#endif
 #endif
 
 //
@@ -329,22 +327,22 @@ struct _LIST_ENTRY {
 ///
 /// Maximum values for common UEFI Data Types
 ///
-#define MAX_INT8    0x7F
-#define MAX_UINT8   0xFFU
-#define MAX_INT16   0x7FFF
-#define MAX_UINT16  0xFFFFU
-#define MAX_INT32   0x7FFFFFFF
-#define MAX_UINT32  0xFFFFFFFFU
-#define MAX_INT64   0x7FFFFFFFFFFFFFFFLL
-#define MAX_UINT64  0xFFFFFFFFFFFFFFFFULL
+#define MAX_INT8    ((INT8)0x7F)
+#define MAX_UINT8   ((UINT8)0xFF)
+#define MAX_INT16   ((INT16)0x7FFF)
+#define MAX_UINT16  ((UINT16)0xFFFF)
+#define MAX_INT32   ((INT32)0x7FFFFFFF)
+#define MAX_UINT32  ((UINT32)0xFFFFFFFF)
+#define MAX_INT64   ((INT64)0x7FFFFFFFFFFFFFFFULL)
+#define MAX_UINT64  ((UINT64)0xFFFFFFFFFFFFFFFFULL)
 
 ///
 /// Minimum values for the signed UEFI Data Types
 ///
-#define MIN_INT8   (-0x7F - 1)
-#define MIN_INT16  (-0x7FFF - 1)
-#define MIN_INT32  (-0x7FFFFFFF - 1)
-#define MIN_INT64  (-0x7FFFFFFFFFFFFFFFLL - 1)
+#define MIN_INT8   (((INT8)  -127) - 1)
+#define MIN_INT16  (((INT16) -32767) - 1)
+#define MIN_INT32  (((INT32) -2147483647) - 1)
+#define MIN_INT64  (((INT64) -9223372036854775807LL) - 1)
 
 #define  BIT0   0x00000001
 #define  BIT1   0x00000002
@@ -1060,7 +1058,7 @@ typedef UINTN RETURN_STATUS;
   @retval FALSE         The high bit of StatusCode is clear.
 
 **/
-#define RETURN_ERROR(StatusCode)  (((INTN)(RETURN_STATUS)(StatusCode)) < 0)
+#define RETURN_ERROR(StatusCode)  (((RETURN_STATUS)(StatusCode)) >= MAX_BIT)
 
 ///
 /// The operation completed successfully.
@@ -1334,9 +1332,6 @@ typedef UINTN RETURN_STATUS;
     (SIGNATURE_32 (A, B, C, D) | ((UINT64) (SIGNATURE_32 (E, F, G, H)) << 32))
 
 #if defined (_MSC_EXTENSIONS) && !defined (__INTEL_COMPILER) && !defined (MDE_CPU_EBC)
-#ifdef __cplusplus
-extern "C"
-#endif
 void *
 _ReturnAddress (
   void

@@ -144,13 +144,13 @@ typedef INT64 INTN;
 ///
 /// Maximum legal AArch64 INTN and UINTN values.
 ///
-#define MAX_INTN   0x7FFFFFFFFFFFFFFFULL
-#define MAX_UINTN  0xFFFFFFFFFFFFFFFFULL
+#define MAX_INTN   ((INTN)0x7FFFFFFFFFFFFFFFULL)
+#define MAX_UINTN  ((UINTN)0xFFFFFFFFFFFFFFFFULL)
 
 ///
 /// Minimum legal AArch64 INTN value.
 ///
-#define MIN_INTN  (-0x7FFFFFFFFFFFFFFFLL - 1)
+#define MIN_INTN  (((INTN)-9223372036854775807LL) - 1)
 
 ///
 /// The stack alignment required for AARCH64
