@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Definitions based on NVMe spec. version 2.0c.
 
   (C) Copyright 2016 Hewlett Packard Enterprise Development LP<BR>

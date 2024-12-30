@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The file provides the mechanism to set and get the values
   associated with a keyword exposed through a x-UEFI- prefixed
   configuration language namespace.

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI REST Protocol interface.
 
   Copyright (c) 2015, Intel Corporation. All rights reserved.<BR>

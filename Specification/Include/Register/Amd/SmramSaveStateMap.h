@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   AMD SMRAM Save State Map Definitions.
 
   SMRAM Save State Map definitions based on contents of the

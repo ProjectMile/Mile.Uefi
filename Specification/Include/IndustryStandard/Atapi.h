@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file contains just some basic definitions that are needed by drivers
   that dealing with ATA/ATAPI interface.
 

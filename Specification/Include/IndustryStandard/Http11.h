@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Hypertext Transfer Protocol -- HTTP/1.1 Standard definitions, from RFC 2616
 
   This file contains common HTTP 1.1 definitions from RFC 2616

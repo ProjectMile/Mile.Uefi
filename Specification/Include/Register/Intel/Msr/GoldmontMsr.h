@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   MSR Definitions for Intel Atom processors based on the Goldmont microarchitecture.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

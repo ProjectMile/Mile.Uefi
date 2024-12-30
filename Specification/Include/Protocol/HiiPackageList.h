@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_HII_PACKAGE_LIST_PROTOCOL as defined in UEFI 2.1.
   Boot service LoadImage() installs EFI_HII_PACKAGE_LIST_PROTOCOL on the handle
   if the image contains a custom PE/COFF resource with the type 'HII'.

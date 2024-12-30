@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Defines Windows UX Capsule GUID and layout defined at Microsoft
   Windows UEFI Firmware Update Platform specification
 

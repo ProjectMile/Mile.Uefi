@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   PCI Root Bridge I/O protocol as defined in the UEFI 2.0 specification.
 
   PCI Root Bridge I/O protocol is used by PCI Bus Driver to perform PCI Memory, PCI I/O,

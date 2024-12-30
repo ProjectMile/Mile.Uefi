@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI REST EX Protocol interface. It is
   split into the following two main sections.
 

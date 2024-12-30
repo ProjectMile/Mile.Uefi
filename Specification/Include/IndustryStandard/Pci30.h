@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Support for PCI 3.0 standard.
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The EFI_ATA_PASS_THRU_PROTOCOL provides information about an ATA controller and the ability
   to send ATA Command Blocks to any ATA device attached to that ATA controller. The information
   includes the attributes of the ATA controller.

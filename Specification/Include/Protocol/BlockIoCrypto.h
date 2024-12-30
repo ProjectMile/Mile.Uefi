@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The UEFI Inline Cryptographic Interface protocol provides services to abstract
   access to inline cryptographic capabilities.
 

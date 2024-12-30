@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Header file for SD memory card support.
 
   This header file contains some definitions defined in SD Physical Layer Simplified

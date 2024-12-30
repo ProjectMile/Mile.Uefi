@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   IPMI 2.0 definitions from the IPMI Specification Version 2.0, Revision 1.1.
   IPMI Intelligent Chassis Management Bus Bridge Specification Version 1.0,
   Revision 1.3.

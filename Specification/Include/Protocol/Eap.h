@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI EAP(Extended Authenticaton Protocol) Protocol Definition
   The EFI EAP Protocol is used to abstract the ability to configure and extend the
   EAP framework.

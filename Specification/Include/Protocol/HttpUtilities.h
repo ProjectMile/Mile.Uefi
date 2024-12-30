@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI HTTP Utilities protocol provides a platform independent abstraction for HTTP
   message comprehension.
 

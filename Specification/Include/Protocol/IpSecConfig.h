@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI IPsec Configuration Protocol Definition
   The EFI_IPSEC_CONFIG_PROTOCOL provides the mechanism to set and retrieve security and
   policy related information for the EFI IPsec protocol driver.

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Simple Text Out protocol from the UEFI 2.0 specification.
 
   Abstraction of a very simple text based output device like VGA text mode or

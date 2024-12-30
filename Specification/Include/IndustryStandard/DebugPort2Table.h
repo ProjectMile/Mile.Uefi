@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI debug port 2 table definition, defined at
   Microsoft DebugPort2Specification.
 

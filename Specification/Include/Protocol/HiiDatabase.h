@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The file provides Database manager for HII-related data
   structures.
 

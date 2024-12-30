@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Component Name Protocol as defined in the EFI 1.1 specification.
   This protocol is used to retrieve user readable names of EFI Drivers
   and controllers managed by EFI Drivers.

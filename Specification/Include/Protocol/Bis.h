@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The EFI_BIS_PROTOCOL is used to check a digital signature of a data block
   against a digital certificate for the purpose of an integrity and authorization check.
 

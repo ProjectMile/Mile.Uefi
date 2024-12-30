@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The file provides services to manipulate string data.
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

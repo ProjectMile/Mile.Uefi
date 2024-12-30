@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI PXE Base Code Protocol definitions, which is used to access PXE-compatible
   devices for network access and network booting.
 

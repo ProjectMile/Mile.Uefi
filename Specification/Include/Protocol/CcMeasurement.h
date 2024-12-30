@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   If CC Guest firmware supports measurement and an event is created,
   CC Guest firmware is designed to report the event log with the same
   data structure in TCG-Platform-Firmware-Profile specification with

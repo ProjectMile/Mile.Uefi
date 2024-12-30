@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_HASH_SERVICE_BINDING_PROTOCOL as defined in UEFI 2.0.
   EFI_HASH_PROTOCOL as defined in UEFI 2.0.
   The EFI Hash Service Binding Protocol is used to locate hashing services support

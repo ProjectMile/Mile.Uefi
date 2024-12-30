@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
 
   HII keyboard layout GUID as defined in UEFI2.1 specification
 

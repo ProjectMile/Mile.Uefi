@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   SimpleFileSystem protocol as defined in the UEFI 2.0 specification.
 
   The SimpleFileSystem protocol is the programmatic access to the FAT (12,16,32)

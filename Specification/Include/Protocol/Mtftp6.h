@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI Multicast Trivial File Transfer Protocol v6 Definition, which is built upon
   the EFI UDPv6 Protocol and provides basic services for client-side unicast and/or
   multicast TFTP operations.

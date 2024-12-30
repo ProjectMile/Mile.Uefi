@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI REST JSON Structure Protocol interface.
 
   (C) Copyright 2020 Hewlett Packard Enterprise Development LP<BR>

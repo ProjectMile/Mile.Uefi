@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TPM2 Protocol as defined in TCG PC Client Platform EFI Protocol Specification Family "2.0".
   See http://trustedcomputinggroup.org for the latest specification
 

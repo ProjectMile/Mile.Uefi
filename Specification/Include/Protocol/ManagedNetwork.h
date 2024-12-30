@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_MANAGED_NETWORK_SERVICE_BINDING_PROTOCOL as defined in UEFI 2.0.
   EFI_MANAGED_NETWORK_PROTOCOL as defined in UEFI 2.0.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TCG defined values and structures.
 
   (TCG Storage Architecture Core Specification, Version 2.01, Revision 1.00,

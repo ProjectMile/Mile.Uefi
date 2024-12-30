@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI 6.3 definitions from the ACPI Specification Revision 6.3 Jan, 2019.
 
   Copyright (c) 2017 - 2022, Intel Corporation. All rights reserved.<BR>

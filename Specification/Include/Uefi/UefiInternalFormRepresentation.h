@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the encoding for the VFR (Visual Form Representation) language.
   IFR is primarily consumed by the EFI presentation engine, and produced by EFI
   internal application and drivers as well as all add-in card option-ROM drivers

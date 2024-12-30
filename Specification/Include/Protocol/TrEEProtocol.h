@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This protocol is defined to abstract TPM2 hardware access in boot phase.
 
 Copyright (c) 2013 - 2018, Intel Corporation. All rights reserved.<BR>

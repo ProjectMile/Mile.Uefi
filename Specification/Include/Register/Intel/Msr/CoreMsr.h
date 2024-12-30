@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   MSR Definitions for Intel Core Solo and Intel Core Duo Processors.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   MSR Definitions for Intel processors based on the Silvermont microarchitecture.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

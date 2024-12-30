@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUID used for MemoryOverwriteRequestControl UEFI variable defined in
   TCG Platform Reset Attack Mitigation Specification 1.00.
   See http://trustedcomputinggroup.org for the latest specification

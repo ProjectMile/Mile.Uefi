@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file contains definitions for the SPD fields on an SDRAM.
 
   Copyright (c) 2007 - 2016, Intel Corporation. All rights reserved.<BR>

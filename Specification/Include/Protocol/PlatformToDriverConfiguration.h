@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI Platform to Driver Configuration Protocol is defined in UEFI specification.
 
   This is a protocol that is optionally produced by the platform and optionally consumed

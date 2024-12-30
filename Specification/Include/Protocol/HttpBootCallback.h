@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI HTTP Boot Callback Protocol interface.
 
   Copyright (c) 2017 - 2018, Intel Corporation. All rights reserved.<BR>

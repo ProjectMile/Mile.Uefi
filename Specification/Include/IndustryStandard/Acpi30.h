@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI 3.0 definitions from the ACPI Specification Revision 3.0b October 10, 2006
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI Dynamic Host Configuration Protocol 6 Definition, which is used to get IPv6
   addresses and other configuration parameters from DHCPv6 servers.
 

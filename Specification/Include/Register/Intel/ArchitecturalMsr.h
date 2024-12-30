@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Intel Architectural MSR Definitions.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

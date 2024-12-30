@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Simple Text Input Ex protocol from the UEFI 2.0 specification.
 
   This protocol defines an extension to the EFI_SIMPLE_TEXT_INPUT_PROTOCOL

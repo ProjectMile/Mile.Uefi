@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI DNSv6 (Domain Name Service version 6) Protocol. It is split
   into the following two main sections:
   DNSv6 Service Binding Protocol (DNSv6SB)

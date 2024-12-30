@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Guid used to identify HII FormMap configuration method.
 
   Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>

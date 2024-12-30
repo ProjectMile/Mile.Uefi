@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file contains the Bluetooth definitions that are consumed by drivers.
   These definitions are from Bluetooth Core Specification Version 4.0 June, 2010
 

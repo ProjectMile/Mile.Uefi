@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI EAP Management Protocol Definition
   The EFI EAP Management Protocol is designed to provide ease of management and
   ease of test for EAPOL state machine. It is intended for the supplicant side.

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Block Translation Table (BTT) metadata layout definition.
 
   BTT is a layout and set of rules for doing block I/O that provide powerfail

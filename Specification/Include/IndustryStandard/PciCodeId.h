@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The file lists the PCI class codes only defined in PCI code and ID assignment specification
   revision 1.3.
 

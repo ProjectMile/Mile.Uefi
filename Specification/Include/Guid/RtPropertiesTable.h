@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
 Guid & data structure for EFI_RT _PROPERTIES_TABLE, designed to be published by a
 platform if it no longer  supports all EFI runtime services once ExitBootServices()
 has been called by the OS. Introduced in UEFI 2.8a.

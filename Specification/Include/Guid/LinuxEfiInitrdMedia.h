@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUID definition for the Linux Initrd media device path
 
   Linux distro boot generally relies on an initial ramdisk (initrd) which is

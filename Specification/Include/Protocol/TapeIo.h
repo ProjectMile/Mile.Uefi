@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_TAPE_IO_PROTOCOL as defined in the UEFI 2.0.
   Provide services to control and access a tape device.
 

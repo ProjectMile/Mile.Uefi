@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The device path protocol as defined in UEFI 2.0.
 
   The device path represents a programmatic path to a device,

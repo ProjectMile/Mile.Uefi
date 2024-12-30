@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Industry Standard Definitions of SMBIOS Table Specification v3.8.0.
 
 Copyright (c) 2006 - 2024, Intel Corporation. All rights reserved.<BR>

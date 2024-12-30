@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUIDs used for MPS entries in the UEFI 2.0 system table
   ACPI is the primary means of exporting MPS information to the OS. MPS only was
   included to support Itanium-based platform power on. So don't use it if you don't have too.

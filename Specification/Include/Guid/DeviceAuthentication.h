@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Guid & data structure used for Device Security.
 
   Copyright (c) 2024, Intel Corporation. All rights reserved.<BR>

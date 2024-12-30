@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI EAP Management2 protocol.
 
   Copyright (c) 2015, Intel Corporation. All rights reserved.<BR>

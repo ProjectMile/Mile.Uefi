@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI Service Binding Protocol is defined in UEFI specification.
 
   The file defines the generic Service Binding Protocol functions.

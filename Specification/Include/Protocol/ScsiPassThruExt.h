@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_EXT_SCSI_PASS_THRU_PROTOCOL as defined in UEFI 2.0.
   This protocol provides services that allow SCSI Pass Thru commands
   to be sent to SCSI devices attached to a SCSI channel.

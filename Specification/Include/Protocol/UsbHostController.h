@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_USB_HC_PROTOCOL as defined in EFI 1.10.
 
   The USB Host Controller Protocol is used by code, typically USB bus drivers,

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
 
   The EFI HII results processing protocol invokes this type of protocol
   when it needs to forward results to a driver's configuration handler.

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI 2.3.1 User Credential Protocol definition.
 
   Attached to a device handle, this protocol identifies a single means of identifying the user.

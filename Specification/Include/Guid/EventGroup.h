@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUIDs for gBS->CreateEventEx Event Groups. Defined in UEFI spec 2.0 and PI 1.2.1.
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

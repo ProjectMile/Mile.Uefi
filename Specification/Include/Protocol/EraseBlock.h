@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI Erase Block Protocol.
 
   Copyright (c) 2016, Intel Corporation. All rights reserved.<BR>

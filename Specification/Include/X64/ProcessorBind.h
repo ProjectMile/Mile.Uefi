@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Processor or Compiler specific defines and types x64 (Intel 64, AMD64).
 
   Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>

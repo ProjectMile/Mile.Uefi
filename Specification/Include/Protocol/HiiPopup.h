@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This protocol provides services to display a popup window.
   The protocol is typically produced by the forms browser and consumed by a driver callback handler.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   OSTA Universal Disk Format (UDF) definitions.
 
   Copyright (C) 2014-2017 Paulo Alcantara <pcacjr@zytor.com>

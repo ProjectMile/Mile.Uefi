@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Service Processor Management Interface (SPMI) ACPI table definition from
   Intelligent Platform Management Interface Specification Second Generation.
 

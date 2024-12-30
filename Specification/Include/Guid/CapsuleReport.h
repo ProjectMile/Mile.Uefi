@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Guid & data structure used for Capsule process result variables
 
   Copyright (c) 2015 - 2018, Intel Corporation. All rights reserved.<BR>

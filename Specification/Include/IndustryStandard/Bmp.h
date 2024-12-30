@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines BMP file header data structures.
 
 Copyright (c) 2006 - 2011, Intel Corporation. All rights reserved.<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Driver Health Protocol definitions.
 
   When installed, the Driver Health Protocol produces a collection of services that allow

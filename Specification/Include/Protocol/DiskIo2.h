@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Disk I/O 2 protocol as defined in the UEFI 2.4 specification.
 
   The Disk I/O 2 protocol defines an extension to the Disk I/O protocol to enable

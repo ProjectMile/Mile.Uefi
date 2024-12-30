@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Load File protocol as defined in the UEFI 2.0 specification.
 
   Load file protocol exists to supports the addition of new boot devices,

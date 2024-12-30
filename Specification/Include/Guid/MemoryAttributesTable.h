@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUIDs used for UEFI Memory Attributes Table in the UEFI 2.6 specification.
 
   Copyright (c) 2016, Intel Corporation. All rights reserved.<BR>

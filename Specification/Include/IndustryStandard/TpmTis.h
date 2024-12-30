@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TPM Interface Specification definition.
   It covers both TPM1.2 and TPM2.0.
 

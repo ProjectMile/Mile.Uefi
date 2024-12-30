@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUIDs used for ACPI entries in the EFI system table
 
   These GUIDs point the ACPI tables as defined in the ACPI specifications.

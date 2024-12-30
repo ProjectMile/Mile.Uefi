@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TPM2.0 Specification data structures
   (Trusted Platform Module Library Specification, Family "2.0", Level 00, Revision 00.96,
   @http://www.trustedcomputinggroup.org/resources/tpm_library_specification)

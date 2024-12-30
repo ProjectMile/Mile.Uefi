@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUID and related data structures used with the Debug Image Info Table.
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

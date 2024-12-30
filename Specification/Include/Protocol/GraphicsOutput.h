@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Graphics Output Protocol from the UEFI 2.0 specification.
 
   Abstraction of a very simple graphics device.

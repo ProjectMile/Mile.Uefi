@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This protocol provides generic image decoder interfaces to various image formats.
 
 (C) Copyright 2016 Hewlett Packard Enterprise Development LP<BR>

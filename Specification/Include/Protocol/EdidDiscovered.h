@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EDID Discovered Protocol from the UEFI 2.0 specification.
 
   This protocol is placed on the video output device child handle. It represents

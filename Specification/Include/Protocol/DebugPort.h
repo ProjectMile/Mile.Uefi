@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
 
   The file defines the EFI Debugport protocol.
   This protocol is used by debug agent to communicate with the

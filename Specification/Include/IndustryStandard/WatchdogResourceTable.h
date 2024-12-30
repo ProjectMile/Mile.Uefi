@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI Watchdog Resource Table (WDRT) as defined at
   Microsoft Windows Hardware Developer Central.
 

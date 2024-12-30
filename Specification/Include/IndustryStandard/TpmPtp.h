@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Platform TPM Profile Specification definition for TPM2.0.
   It covers both FIFO and CRB interface.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This protocol is defined in UEFI spec.
 
   The EFI_FORM_BROWSER2_PROTOCOL is the interface to call for drivers to

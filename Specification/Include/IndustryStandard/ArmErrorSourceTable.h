@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Arm Error Source Table as described in the
   'ACPI for the Armv8 RAS Extensions 1.1' Specification.
 

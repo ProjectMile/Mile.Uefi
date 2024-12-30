@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI NVDIMM Label Protocol Definition
 
   The EFI NVDIMM Label Protocol is used to Provides services that allow management

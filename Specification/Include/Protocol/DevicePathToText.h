@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_DEVICE_PATH_TO_TEXT_PROTOCOL as defined in UEFI 2.0.
   This protocol provides service to convert device nodes and paths to text.
 

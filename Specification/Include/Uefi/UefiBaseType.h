@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Defines data types and constants introduced in UEFI.
 
 Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>

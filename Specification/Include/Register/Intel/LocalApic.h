@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   IA32 Local APIC Definitions.
 
   Copyright (c) 2010 - 2019, Intel Corporation. All rights reserved.<BR>

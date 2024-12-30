@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Support for the latest CXL standard
 
   The main header to reference all versions of CXL Base specification registers

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Defines Windows SMM Security Mitigation Table
   @ https://msdn.microsoft.com/windows/hardware/drivers/bringup/acpi-system-description-tables#wsmt
 

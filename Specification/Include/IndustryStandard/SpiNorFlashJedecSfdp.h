@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   SPI NOR Flash JEDEC Serial Flash Discoverable Parameters (SFDP)
   header file.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Unicode Collation protocol that follows the UEFI 2.0 specification.
   This protocol is used to allow code running in the boot services environment
   to perform lexical comparison functions on Unicode strings for given languages.

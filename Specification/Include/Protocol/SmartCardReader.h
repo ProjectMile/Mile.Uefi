@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The UEFI Smart Card Reader Protocol provides an abstraction for device to provide
   smart card reader support. This protocol is very close to Part 5 of PC/SC workgroup
   specifications and provides an API to applications willing to communicate with a

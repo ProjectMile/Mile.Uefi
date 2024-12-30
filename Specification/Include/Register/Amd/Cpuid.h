@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   CPUID leaf definitions.
 
   Provides defines for CPUID leaf indexes.  Data structures are provided for

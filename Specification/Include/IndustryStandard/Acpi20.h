@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI 2.0 definitions from the ACPI Specification, revision 2.0
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

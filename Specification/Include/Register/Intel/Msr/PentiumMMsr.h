@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   MSR Definitions for Pentium M Processors.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The USB Function Protocol provides an I/O abstraction for a USB Controller
   operating in Function mode (also commonly referred to as Device, Peripheral,
   or Target mode) and the mechanisms by which the USB Function can communicate

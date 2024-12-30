@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The file provides services to manage the movement of
   configuration data from drivers to configuration applications.
   It then serves as the single point to receive configuration

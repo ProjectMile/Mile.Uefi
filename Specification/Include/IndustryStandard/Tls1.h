@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Transport Layer Security  -- TLS 1.0/1.1/1.2 Standard definitions, from RFC 2246/4346/5246
 
   This file contains common TLS 1.0/1.1/1.2 definitions from RFC 2246/4346/5246

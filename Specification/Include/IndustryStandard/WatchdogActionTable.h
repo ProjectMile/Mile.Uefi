@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI Watchdog Action Table (WADT) as defined at
   Microsoft Hardware Watchdog Timers Design Specification.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI ACPI Data Table Definition.
 
 Copyright (c) 2011 - 2018, Intel Corporation. All rights reserved.<BR>

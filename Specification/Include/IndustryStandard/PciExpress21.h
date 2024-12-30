@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Support for the latest PCI standard.
 
   Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>

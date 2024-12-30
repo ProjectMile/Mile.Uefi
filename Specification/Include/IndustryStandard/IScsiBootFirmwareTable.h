@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The definition for iSCSI Boot Firmware Table, it's defined in Microsoft's
   iSCSI Boot Firmware Table(iBFT) as Defined in ACPI 3.0b Specification.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Reset Notification Protocol as defined in UEFI 2.7.
   This protocol provides services to register for a notification when ResetSystem is called.
 

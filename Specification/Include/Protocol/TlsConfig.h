@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI TLS Configuration Protocol as defined in UEFI 2.5.
   The EFI TLS Configuration Protocol provides a way to set and get TLS configuration.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI Firmware Management Protocol definition
   Firmware Management Protocol provides an abstraction for device to provide firmware
   management support. The base requirements for managing device firmware images include

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Bus Specific Driver Override protocol as defined in the UEFI 2.0 specification.
 
   Bus drivers that have a bus specific algorithm for matching drivers to controllers are

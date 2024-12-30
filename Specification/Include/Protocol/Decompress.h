@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The Decompress Protocol Interface as defined in UEFI spec
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

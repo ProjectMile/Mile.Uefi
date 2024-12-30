@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Guest-Hypervisor Communication Block (GHCB) Definition.
 
   Provides data types allowing an SEV-ES guest to interact with the hypervisor

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI User Manager Protocol definition.
 
   This protocol manages user profiles.

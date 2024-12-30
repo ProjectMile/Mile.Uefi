@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
 
   The definitions of DMTF Management Component Transport Protocol (MCTP)
   Base Specification.

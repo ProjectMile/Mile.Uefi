@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUIDs and definitions used for Common Platform Error Record.
 
   Copyright (c) 2011 - 2017, Intel Corporation. All rights reserved.<BR>

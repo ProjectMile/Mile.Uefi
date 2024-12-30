@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI EAP Configuration protocol.
 
   Copyright (c) 2015 - 2018, Intel Corporation. All rights reserved.<BR>

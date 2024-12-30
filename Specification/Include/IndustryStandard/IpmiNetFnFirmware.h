@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   IPMI 2.0 definitions from the IPMI Specification Version 2.0, Revision 1.1.
 
   Copyright (c) 1999 - 2015, Intel Corporation. All rights reserved.<BR>

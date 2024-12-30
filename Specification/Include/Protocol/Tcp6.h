@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI TCPv6(Transmission Control Protocol version 6) Protocol Definition
   The EFI TCPv6 Service Binding Protocol is used to locate EFI TCPv6 Protocol drivers to create
   and destroy child of the driver to communicate with other host using TCP protocol.

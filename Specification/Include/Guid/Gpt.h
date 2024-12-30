@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Guids used for the GPT (GUID Partition Table)
 
   GPT defines a new disk partitioning scheme and also describes

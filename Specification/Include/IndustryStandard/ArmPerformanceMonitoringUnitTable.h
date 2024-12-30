@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI Arm Performance Monitoring Unit (APMT) table
   as specified in ARM spec DEN0117
 

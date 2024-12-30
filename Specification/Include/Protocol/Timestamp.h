@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Timestamp Protocol as defined in UEFI2.4 Specification.
   Used to provide a platform independent interface for retrieving a high resolution timestamp counter.
 

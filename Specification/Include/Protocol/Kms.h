@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The Key Management Service (KMS) protocol as defined in the UEFI 2.3.1 specification is to
   provides services to generate, store, retrieve, and manage cryptographic keys.
   The intention is to specify a simple generic protocol that could be used for many implementations.

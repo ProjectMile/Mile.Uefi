@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Support for SCSI-2 standard
 
   Copyright (c) 2006 - 2020, Intel Corporation. All rights reserved.<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI Low Power Idle Table (LPIT) definitions
 
   Copyright (c) 2016, Intel Corporation. All rights reserved.<BR>

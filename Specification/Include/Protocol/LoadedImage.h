@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI 2.0 Loaded image protocol definition.
 
   Every EFI driver and application is passed an image handle when it is loaded.

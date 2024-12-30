@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Disk IO protocol as defined in the UEFI 2.0 specification.
 
   The Disk IO protocol is used to convert block oriented devices into byte

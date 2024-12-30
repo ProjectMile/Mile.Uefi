@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Provides string functions, linked list functions, math functions, synchronization
   functions, file path functions, and CPU architecture-specific functions.
 

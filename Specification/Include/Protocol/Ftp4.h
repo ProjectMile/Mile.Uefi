@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI FTPv4 (File Transfer Protocol version 4) Protocol Definition
   The EFI FTPv4 Protocol is used to locate communication devices that are
   supported by an EFI FTPv4 Protocol driver and to create and destroy instances

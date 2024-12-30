@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   IPMI Platform Management FRU Information Storage Definitions
 
   This file contains the definitions for:

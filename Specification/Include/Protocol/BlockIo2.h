@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Block IO2 protocol as defined in the UEFI 2.3.1 specification.
 
   The Block IO2 protocol defines an extension to the Block IO protocol which

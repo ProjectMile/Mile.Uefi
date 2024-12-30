@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TCG Physical Presence definition.
 
 Copyright (c) 2015 - 2018, Intel Corporation. All rights reserved.<BR>

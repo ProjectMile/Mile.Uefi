@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the SPI I/O Protocol.
 
   Copyright (c) 2017, Intel Corporation. All rights reserved.<BR>

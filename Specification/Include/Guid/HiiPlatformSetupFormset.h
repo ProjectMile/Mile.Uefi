@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUID indicates that the form set contains forms designed to be used
   for platform configuration and this form set will be displayed.
 

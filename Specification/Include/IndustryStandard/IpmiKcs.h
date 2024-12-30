@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   IPMI KCS Register Definitions
 
   Copyright (C) 2023 Advanced Micro Devices, Inc. All rights reserved.<BR>

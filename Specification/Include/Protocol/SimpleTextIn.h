@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Simple Text Input protocol from the UEFI 2.0 specification.
 
   Abstraction of a very simple input device like a keyboard or serial

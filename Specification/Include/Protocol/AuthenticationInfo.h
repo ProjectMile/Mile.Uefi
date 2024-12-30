@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_AUTHENTICATION_INFO_PROTOCOL as defined in UEFI 2.0.
   This protocol is used on any device handle to obtain authentication information
   associated with the physical or logical device.

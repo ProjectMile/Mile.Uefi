@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The file provides the protocol to install or remove an ACPI
   table from a platform.
 

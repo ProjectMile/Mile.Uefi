@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Adapter Information Protocol definition.
   The EFI Adapter Information Protocol is used to dynamically and quickly discover
   or set device information for an adapter.

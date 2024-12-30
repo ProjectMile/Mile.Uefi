@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EDID Active Protocol from the UEFI 2.0 specification.
 
   Placed on the video output device child handle that is actively displaying output.

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Boot Manager Policy Protocol as defined in UEFI Specification.
 
   This protocol is used by EFI Applications to request the UEFI Boot Manager

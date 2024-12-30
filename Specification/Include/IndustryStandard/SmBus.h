@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file declares the SMBus definitions defined in SmBus Specification V2.0
   and defined in PI1.0 specification volume 5.
 

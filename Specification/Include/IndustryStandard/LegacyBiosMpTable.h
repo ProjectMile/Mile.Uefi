@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Defives data structures per MultiProcessor Specification Ver 1.4.
 
   The MultiProcessor Specification defines an enhancement to the standard

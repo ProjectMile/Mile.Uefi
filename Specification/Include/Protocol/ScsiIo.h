@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_SCSI_IO_PROTOCOL as defined in UEFI 2.0.
   This protocol is used by code, typically drivers, running in the EFI boot
   services environment to access SCSI devices. In particular, functions for

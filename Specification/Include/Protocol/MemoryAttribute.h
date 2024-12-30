@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
 
   EFI Memory Attribute Protocol provides retrieval and update service
   for memory attributes in EFI environment.

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Guid & data structure used for EFI System Resource Table (ESRT)
 
   Copyright (c) 2015 - 2020, Intel Corporation. All rights reserved.<BR>

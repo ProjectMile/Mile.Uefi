@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Intel Trust Domain Extension definitions
   Detailed information is in below document:
   https://software.intel.com/content/dam/develop/external/us/en/documents

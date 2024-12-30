@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Image signature database are defined for the signed image validation.
 
   Copyright (c) 2009 - 2024, Intel Corporation. All rights reserved.<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_USB2_HC_PROTOCOL as defined in UEFI 2.0.
   The USB Host Controller Protocol is used by code, typically USB bus drivers,
   running in the EFI boot services environment, to perform data transactions over

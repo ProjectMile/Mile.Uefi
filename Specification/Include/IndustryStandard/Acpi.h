@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file contains the latest ACPI definitions that are
   consumed by drivers that do not care about ACPI versions.
 

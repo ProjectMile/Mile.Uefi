@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TCG Service Protocol as defined in TCG_EFI_Protocol_1_22_Final
   See http://trustedcomputinggroup.org for the latest specification
 

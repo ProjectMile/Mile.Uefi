@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Usb I/O Protocol as defined in UEFI specification.
   This protocol is used by code, typically drivers, running in the EFI
   boot services environment to access USB devices like USB keyboards,

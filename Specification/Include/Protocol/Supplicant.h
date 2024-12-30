@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI Supplicant Protocol.
 
   Copyright (c) 2016 - 2017, Intel Corporation. All rights reserved.<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Bluetooth IO Service Binding Protocol as defined in UEFI 2.5.
   EFI Bluetooth IO Protocol as defined in UEFI 2.5.
   The EFI Bluetooth IO Service Binding Protocol is used to locate EFI Bluetooth IO Protocol drivers to

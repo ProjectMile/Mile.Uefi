@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI IPv4 (Internet Protocol version 4)
   Protocol interface. It is split into the following three main
   sections:

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Bluetooth Attribute Protocol as defined in UEFI 2.7.
   This protocol provides service for Bluetooth ATT (Attribute Protocol) and GATT (Generic
   Attribute Profile) based protocol interfaces.

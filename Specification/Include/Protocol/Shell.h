@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Shell protocol as defined in the UEFI Shell 2.0 specification including errata.
 
   (C) Copyright 2014 Hewlett-Packard Development Company, L.P.<BR>

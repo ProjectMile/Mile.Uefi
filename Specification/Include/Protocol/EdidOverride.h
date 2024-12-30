@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EDID Override Protocol from the UEFI 2.0 specification.
 
   Allow platform to provide EDID information to the producer of the Graphics Output

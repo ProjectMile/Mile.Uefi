@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
 Definitions for Confidential Computing Guest Attributes
 
 Copyright (c) 2021 AMD Inc. All rights reserved.<BR>

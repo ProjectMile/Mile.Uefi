@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This header file contains all of the PXE type definitions,
   structure prototypes, global variables and constants that
   are needed for porting PXE to EFI.

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUIDs used to locate the SMBIOS tables in the UEFI 2.5 system table.
 
   These GUIDs in the system table are the only legal ways to search for and

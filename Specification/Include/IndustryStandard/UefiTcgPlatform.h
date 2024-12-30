@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TCG EFI Platform Definition in TCG_EFI_Platform_1_20_Final and
   TCG PC Client Platform Firmware Profile Specification, Revision 1.06
 

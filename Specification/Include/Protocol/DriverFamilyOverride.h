@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI Driver Family Protocol
 
 Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>

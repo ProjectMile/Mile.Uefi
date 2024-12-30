@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The EFI_SD_MMC_PASS_THRU_PROTOCOL provides the ability to send SD/MMC Commands
   to any SD/MMC device attached to the SD compatible pci host controller.
 

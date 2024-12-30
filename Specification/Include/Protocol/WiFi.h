@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file provides management service interfaces of 802.11 MAC layer. It is used by
   network applications (and drivers) to establish wireless connection with an access
   point (AP).

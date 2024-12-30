@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Provides a GUID and a data structure that can be used with EFI_FILE_PROTOCOL.GetInfo()
   or EFI_FILE_PROTOCOL.SetInfo() to get or set information about the system's volume.
   This GUID is defined in UEFI specification.

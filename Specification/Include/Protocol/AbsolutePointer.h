@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The file provides services that allow information about an
   absolute pointer device to be retrieved.
 

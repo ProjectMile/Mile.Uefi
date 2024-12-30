@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
    MSR Definitions for the Intel(R) Core(TM) 2 Processor Family.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

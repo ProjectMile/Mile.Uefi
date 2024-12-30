@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TPM2 ACPI table definition.
 
 Copyright (c) 2013 - 2019, Intel Corporation. All rights reserved. <BR>

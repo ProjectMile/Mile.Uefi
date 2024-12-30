@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI 2.2 Deferred Image Load Protocol definition.
 
   This protocol returns information about images whose load was denied because of security

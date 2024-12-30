@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   TCPA ACPI table definition.
 
 Copyright (c) 2013, Intel Corporation. All rights reserved. <BR>

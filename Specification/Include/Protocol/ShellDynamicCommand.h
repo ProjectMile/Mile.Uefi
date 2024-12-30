@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Shell Dynamic Command registration protocol
 
   (C) Copyright 2012-2014 Hewlett-Packard Development Company, L.P.<BR>

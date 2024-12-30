@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUID for EFI (NVRAM) Variables.
 
   Copyright (c) 2006 - 2024, Intel Corporation. All rights reserved.<BR>

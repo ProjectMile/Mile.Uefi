@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_ISCSI_INITIATOR_NAME_PROTOCOL as defined in UEFI 2.0.
   It provides the ability to get and set the iSCSI Initiator Name.
 

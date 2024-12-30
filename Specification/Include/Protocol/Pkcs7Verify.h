@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_PKCS7_VERIFY_PROTOCOL as defined in UEFI 2.5.
   The EFI_PKCS7_VERIFY_PROTOCOL is used to verify data signed using PKCS#7
   formatted authentication. The PKCS#7 data to be verified must be binary

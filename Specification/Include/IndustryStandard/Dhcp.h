@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file contains the DHCPv4 and DHCPv6 option definitions and other configuration.
   They are used to carry additional information and parameters in DHCP messages.
 

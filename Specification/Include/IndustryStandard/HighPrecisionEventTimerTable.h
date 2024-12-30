@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI high precision event timer table definition, at www.intel.com
   Specification name is IA-PC HPET (High Precision Event Timers) Specification.
 

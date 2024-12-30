@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Serial IO protocol as defined in the UEFI 2.0 specification.
 
   Abstraction of a basic serial device. Targeted at 16550 UART, but

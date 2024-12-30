@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_RNG_PROTOCOL as defined in UEFI 2.4.
   The UEFI Random Number Generator Protocol is used to provide random bits for use
   in applications, or entropy for seeding other random number generators.

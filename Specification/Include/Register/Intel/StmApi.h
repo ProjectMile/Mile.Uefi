@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   STM API definition
 
   Copyright (c) 2015 - 2019, Intel Corporation. All rights reserved.<BR>

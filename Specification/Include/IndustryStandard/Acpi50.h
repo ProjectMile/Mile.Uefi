@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI 5.0 definitions from the ACPI Specification Revision 5.0a November 13, 2013.
 
   Copyright (c) 2014 Hewlett-Packard Development Company, L.P.<BR>

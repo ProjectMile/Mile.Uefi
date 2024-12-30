@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI Component Name 2 Protocol as defined in the UEFI 2.1 specification.
   This protocol is used to retrieve user readable names of drivers
   and controllers managed by UEFI Drivers.

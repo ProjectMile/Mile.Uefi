@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Protocol which allows access to the images in the images database.
 
 (C) Copyright 2016-2018 Hewlett Packard Enterprise Development LP<BR>

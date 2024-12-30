@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   IPMI SSIF Definitions
 
   Copyright (c) 2023, Ampere Computing LLC. All rights reserved.<BR>

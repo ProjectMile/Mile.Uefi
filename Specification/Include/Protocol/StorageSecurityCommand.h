@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Storage Security Command Protocol as defined in UEFI 2.3.1 specification.
   This protocol is used to abstract mass storage devices to allow code running in
   the EFI boot services environment to send security protocol commands to mass

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Secure VM Service Module (SVSM) Definition.
 
   Provides data types allowing an SEV-SNP guest to interact with the SVSM.

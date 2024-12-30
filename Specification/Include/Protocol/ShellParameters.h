@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Shell protocol as defined in the UEFI Shell 2.0 specification.
 
   Copyright (c) 2006 - 2016, Intel Corporation. All rights reserved.<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This section defines the Regular Expression Protocol. This protocol isused to match
   Unicode strings against Regular Expression patterns.
 

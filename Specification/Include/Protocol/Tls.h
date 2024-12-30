@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI TLS Protocols as defined in UEFI 2.5.
 
   The EFI TLS Service Binding Protocol is used to locate EFI TLS Protocol drivers

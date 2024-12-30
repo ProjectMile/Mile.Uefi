@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file contains AML code definition in the latest ACPI spec.
 
   Copyright (c) 2011, Intel Corporation. All rights reserved.<BR>

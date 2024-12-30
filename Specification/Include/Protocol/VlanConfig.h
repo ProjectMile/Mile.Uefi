@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI VLAN Config protocol is to provide manageability interface for VLAN configuration.
 
   Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>

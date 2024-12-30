@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Processor or Compiler specific defines and types for AArch64.
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

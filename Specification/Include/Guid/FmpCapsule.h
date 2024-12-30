@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Guid & data structure used for Delivering Capsules Containing Updates to Firmware
   Management Protocol
 

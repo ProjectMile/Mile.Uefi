@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   The protocol provides information about the version of the EFI
   specification that a driver is following. This protocol is
   required for EFI drivers that are on PCI and other plug-in

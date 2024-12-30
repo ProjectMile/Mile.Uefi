@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Bluetooth Host Controller Protocol as defined in UEFI 2.5.
   This protocol abstracts the Bluetooth host controller layer message transmit and receive.
 

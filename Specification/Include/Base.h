@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Root include file for Mde Package Base type modules
 
   This is the include file for any module of type base. Base modules only use

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   GUID for UEFI WIN_CERTIFICATE structure.
 
   Copyright (c) 2006 - 2012, Intel Corporation. All rights reserved.<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Support for the PCI Express 3.0 standard.
 
   This header file may not define all structures.  Please extend as required.

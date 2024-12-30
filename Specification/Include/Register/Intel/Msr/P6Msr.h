@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   MSR Definitions for P6 Family Processors.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   UEFI DriverBinding Protocol is defined in UEFI specification.
 
   This protocol is produced by every driver that follows the UEFI Driver Model,

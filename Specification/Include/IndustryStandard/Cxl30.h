@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   CXL 3.0 Register definitions
 
   This file contains the register definitions based on the Compute Express Link

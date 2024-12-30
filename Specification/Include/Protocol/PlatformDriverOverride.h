@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Platform Driver Override protocol as defined in the UEFI 2.1 specification.
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

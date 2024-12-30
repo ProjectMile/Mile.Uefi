@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   MSR Definitions for the Intel(R) Atom(TM) Processor Family.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

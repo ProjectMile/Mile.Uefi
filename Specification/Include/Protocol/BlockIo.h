@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Block IO protocol as defined in the UEFI 2.0 specification.
 
   The Block IO protocol is used to abstract block devices like hard drives,

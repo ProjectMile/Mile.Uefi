@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Driver Diagnostics Protocol
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

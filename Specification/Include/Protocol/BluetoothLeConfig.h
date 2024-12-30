@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI Bluetooth LE Config Protocol as defined in UEFI 2.7.
   This protocol abstracts user interface configuration for BluetoothLe device.
 

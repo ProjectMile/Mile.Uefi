@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
 
   The definitions of DMTF Platform Level Data Model (PLDM)
   SMBIOS Transfer Specification.

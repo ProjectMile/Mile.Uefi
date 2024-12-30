@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   It is invoked when the PXE Base Code Protocol is about to transmit, has received,
   or is waiting to receive a packet.
 

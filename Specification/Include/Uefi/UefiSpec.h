@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Include file that supports UEFI.
 
   This include file must contain things defined in the UEFI 2.7 specification.

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Support for USB 2.0 standard.
 
   Copyright (c) 2006 - 2014, Intel Corporation. All rights reserved.<BR>

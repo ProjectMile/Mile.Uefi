@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Header file for eMMC support.
 
   This header file contains some definitions defined in EMMC4.5/EMMC5.0 spec.

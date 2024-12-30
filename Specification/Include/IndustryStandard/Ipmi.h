@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   IPMI 2.0 definitions from the IPMI Specification Version 2.0, Revision 1.1.
   IPMI Platform Management FRU Information Storage Definition v1.0 Revision 1.3.
 

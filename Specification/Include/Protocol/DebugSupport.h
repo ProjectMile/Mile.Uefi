@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   DebugSupport protocol and supporting definitions as defined in the UEFI2.4
   specification.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI Redfish Discover Protocol interface.
 
   (C) Copyright 2021 Hewlett Packard Enterprise Development LP<BR>

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_DEVICE_PATH_UTILITIES_PROTOCOL as defined in UEFI 2.0.
   Use to create and manipulate device paths and device nodes.
 

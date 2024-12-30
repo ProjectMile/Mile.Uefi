@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   DMA Remapping Reporting (DMAR) ACPI table definition from Intel(R)
   Virtualization Technology for Directed I/O (VT-D) Architecture Specification.
 

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   If a GUID-defined section is encountered when doing section
   extraction, the section extraction driver calls the appropriate
   instance of the GUIDed Section Extraction Protocol to extract

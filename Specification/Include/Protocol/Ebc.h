@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Describes the protocol interface to the EBC interpreter.
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

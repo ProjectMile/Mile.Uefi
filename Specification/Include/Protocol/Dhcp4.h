@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI_DHCP4_PROTOCOL as defined in UEFI 2.0.
   EFI_DHCP4_SERVICE_BINDING_PROTOCOL as defined in UEFI 2.0.
   These protocols are used to collect configuration information for the EFI IPv4 Protocol

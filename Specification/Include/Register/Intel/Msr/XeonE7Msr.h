@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   MSR Definitions for Intel(R) Xeon(R) Processor E7 Family.
 
   Provides defines for Machine Specific Registers(MSR) indexes. Data structures

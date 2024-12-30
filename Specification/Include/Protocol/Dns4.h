@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   This file defines the EFI Domain Name Service Binding Protocol interface. It is split
   into the following two main sections:
   DNSv4 Service Binding Protocol (DNSv4SB)

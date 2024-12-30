@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   EFI IPSEC Protocol Definition
   The EFI_IPSEC_PROTOCOL is used to abstract the ability to deal with the individual
   packets sent and received by the host and provide packet-level security for IP

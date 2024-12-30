@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   ACPI IO Remapping Table (IORT) definitions.
 
   Copyright (c) 2017, Linaro Limited. All rights reserved.<BR>

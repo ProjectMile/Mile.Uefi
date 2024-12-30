@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   SCSI Pass Through protocol as defined in EFI 1.1.
   This protocol allows information about a SCSI channel to be collected,
   and allows SCSI Request Packets to be sent to any SCSI devices on a SCSI

@@ -1,4 +1,4 @@
-/** @file
+﻿/** @file
   Support for PCI 2.2 standard.
 
   This file includes the definitions in the following specifications,
