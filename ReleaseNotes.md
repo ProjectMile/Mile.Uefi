@@ -1,6 +1,6 @@
 ﻿# Mile.Uefi Release Notes
 
-**Mile.Uefi 1.0.1437.0**
+**Mile.Uefi 1.0.1438.0**
 
 - Initial release.
 - Provide UEFI Specification definitions based on [EDK II 202502 Release].

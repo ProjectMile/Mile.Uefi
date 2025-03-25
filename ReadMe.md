@@ -12,6 +12,10 @@ The lightweight UEFI toolchain for Visual Studio (MSBuild) C++ projects.
 
 [EDK II 202502 Release]: https://github.com/tianocore/edk2/tree/edk2-stable202502
 
+## Example
+
+- https://github.com/MobilityOS/Mobility
+
 ## Documents
 
 - [License](License.md)
