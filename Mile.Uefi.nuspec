@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PROJECT:   Mouri Internal Library Essentials
+  FILE:      Mile.Uefi.nuspec
+  PURPOSE:   NuGet package definition for Mile.Uefi
+
+  LICENSE:   The MIT License
+
+  MAINTAINER: MouriNaruto (Kenji.Mouri@outlook.com)
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Mile.Uefi</id>
+    <version>1.0.0.0</version>
+    <description>Portable parts of the essential infrastructures</description>
+    <authors>Kenji Mouri</authors>
+    <projectUrl>https://github.com/ProjectMile/Mile.Uefi</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">License.md</license>
+    <readme>ReadMe.md</readme>
+    <repository type="git" url="https://github.com/ProjectMile/Mile.Uefi.git" />
+  </metadata>
+  <files>
+  
+    <file src="Specification\**\*.*" target="Sdk" exclude="Specification\.gitignore" />
+
+    <file src="Mile.Uefi.props" target="Sdk" />
+    <file src="Mile.Uefi.targets" target="Sdk" />
+    
+    <file src="Sdk.props" target="Sdk" />
+    <file src="Sdk.targets" target="Sdk" />
+
+    <file src="ReadMe.md" target="." />
+    <file src="License.md" target="." />
+    <file src="ReleaseNotes.md" target="." />
+
+  </files>
+</package>

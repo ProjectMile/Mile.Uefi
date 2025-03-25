@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project 
+  DefaultTargets="Packaging"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="Packaging">
+    <MSBuild
+      Projects="$(MSBuildThisFileDirectory)Mile.Uefi.proj"
+      Targets="Restore;Build"
+      StopOnFirstFailure="True"
+      Properties="PreferredToolArchitecture=x64" />
+  </Target>
+</Project>
