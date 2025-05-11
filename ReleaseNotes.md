@@ -1,5 +1,15 @@
 ﻿# Mile.Uefi Release Notes
 
+**Mile.Uefi 1.0.1484.0**
+
+- Disable actually unavailable runtime security checks in the bare-metal to
+  reduce the compiler and linker warnings.
+- Remove the specific optimizations to follow the related settings in
+  Mile.Project.Configurations.
+- Add MileUefiDisableUefiHeaders feature support.
+- Add MileUefiDisableUefiGuidSources feature support.
+- Update Mile.Project.Configurations to 1.0.1622.
+
 **Mile.Uefi 1.0.1438.0**
 
 - Initial release.
