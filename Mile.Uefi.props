@@ -88,7 +88,9 @@
     <ClCompile>
       <SDLCheck>false</SDLCheck>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <ControlFlowGuard>false</ControlFlowGuard>
+      <ControlFlowGuard></ControlFlowGuard>
+      <GuardEHContMetadata></GuardEHContMetadata>
+      <GuardSignedReturns></GuardSignedReturns>
     </ClCompile>
     <Link>
       <SubSystem Condition="'$(MileProjectType)'=='UefiApplication'">EFI Application</SubSystem>
@@ -97,6 +99,7 @@
       <SubSystem Condition="'$(MileProjectType)'=='UefiRuntimeDriver'">EFI Runtime</SubSystem>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <DataExecutionPrevention></DataExecutionPrevention>
+      <CETCompat></CETCompat>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>$(ProjectDir);$(MSBuildThisFileDirectory);$(UefiApplicationResourceIncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
