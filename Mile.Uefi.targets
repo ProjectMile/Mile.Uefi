@@ -10,7 +10,7 @@
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Target Name="MileUefiSpecificationBuildSource" BeforeTargets="BeforeClCompile">
-    <ItemGroup>
+    <ItemGroup Condition="'$(MileUefiDisableUefiGuidSources)' != 'true'">
       <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\GuidDefinitions_C.c" />
       <ClCompile Include="$(MSBuildThisFileDirectory)Specification\Source\GuidDefinitions_C++.cpp" />
     </ItemGroup>

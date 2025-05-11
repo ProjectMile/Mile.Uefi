@@ -20,6 +20,12 @@ If you don't want to use the UEFI header files, please set the following option.
 <MileUefiDisableUefiHeaders>true</MileUefiDisableUefiHeaders>
 ```
 
+If you don't want to use the UEFI GUID sources, please set the following option.
+
+```
+<MileUefiDisableUefiGuidSources>true</MileUefiDisableUefiGuidSources>
+```
+
 ## Example
 
 - https://github.com/MobilityOS/Mobility
