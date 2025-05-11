@@ -12,6 +12,14 @@ The lightweight UEFI toolchain for Visual Studio (MSBuild) C++ projects.
 
 [EDK II 202502 Release]: https://github.com/tianocore/edk2/tree/edk2-stable202502
 
+## Available MSBuild project options
+
+If you don't want to use the UEFI header files, please set the following option.
+
+```
+<MileUefiDisableUefiHeaders>true</MileUefiDisableUefiHeaders>
+```
+
 ## Example
 
 - https://github.com/MobilityOS/Mobility
