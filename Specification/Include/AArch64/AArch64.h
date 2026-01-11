@@ -1,7 +1,7 @@
 ﻿/** @file
 
   Copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
-  Copyright (c) 2011 - 2021, Arm Limited. All rights reserved.<BR>
+  Copyright (c) 2011 - 2025, Arm Limited. All rights reserved.<BR>
 
   SPDX-License-Identifier: BSD-2-Clause-Patent
 
@@ -26,12 +26,20 @@
 #define AARCH64_CPTR_RES1     0x33ff
 #define AARCH64_CPTR_DEFAULT  AARCH64_CPTR_RES1
 
-// ID_AA64MMFR1 - AArch64 Memory Model Feature Register 0 definitions
+// ID_AA64MMFR0 - AArch64 Memory Model Feature Register 0 definitions
+#define AARCH64_MMFR0_TGRAN4_52BITS  (0x1UL << 28)
+#define AARCH64_MMFR0_TGRAN4_FIELD   (28)
+#define AARCH64_MMFR0_TGRAN4_MASK    (0xFUL << AARCH64_MMFR0_TGRAN4_FIELD)
+
+// ID_AA64MMFR1 - AArch64 Memory Model Feature Register 1 definitions
 #define AARCH64_MMFR1_VH  (0xF << 8)
 
 // ID_AA64PFR0 - AArch64 Processor Feature Register 0 definitions
 #define AARCH64_PFR0_FP   (0xF << 16)
 #define AARCH64_PFR0_GIC  (0xF << 24)
+
+// ID_AA64PFR2 - AArch64 Processor Feature Register 2 definitions
+#define AARCH64_PFR2_GCIE  (0xF << 12)
 
 // ID_AA64DFR0 - AArch64 Debug Feature Register 0 definitions
 #define AARCH64_DFR0_TRACEVER  (0xFULL << 4)
@@ -122,17 +130,15 @@
 #define ARM_VECTOR_LOW_A32_FIQ   0x700
 #define ARM_VECTOR_LOW_A32_SERR  0x780
 
-// The ID_AA64ISAR2_EL1 register is not recognized by older
-// assemblers, we need to define it here.
+// Definitions for ID registers introducted post ARMv8.0 and not
+// given symbolic names in all relevant assemblers.
 #define ID_AA64ISAR2_EL1  S3_0_C0_C6_2
 
-// The ID_AA64MMFR2_EL1 register was added in ARMv8.2. Since we
-// build for ARMv8.0, we need to define the register here.
 #define ID_AA64MMFR2_EL1  S3_0_C0_C7_2
 
-// The RNDR register is not recognized by older assemblers,
-// so we need to define it here
 #define RNDR  S3_3_C2_C4_0
+
+#define ID_AA64PFR2_EL1  S3_0_C0_C4_2
 
 #define VECTOR_BASE(tbl)          \
   .section .text.##tbl##,"ax";    \
