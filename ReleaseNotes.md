@@ -6,7 +6,7 @@
 - Provide UEFI Specification definitions based on [EDK II 202511 Release]
 - Update Mile.Project.Configurations to 1.0.1827.
 
-[EDK II 202511 Release]: https://github.com/tianocore/edk2/tree/edk2-stable202511.
+[EDK II 202511 Release]: https://github.com/tianocore/edk2/tree/edk2-stable202511
 
 **Mile.Uefi 1.0.1484.0**
 
