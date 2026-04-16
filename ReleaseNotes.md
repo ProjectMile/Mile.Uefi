@@ -1,5 +1,12 @@
 ﻿# Mile.Uefi Release Notes
 
+**Mile.Uefi 1.0.1824.0**
+
+- Provide UEFI Specification definitions based on [EDK II 202602 Release].
+- Update Mile.Project.Configurations to 1.0.1917.
+
+[EDK II 202602 Release]: https://github.com/tianocore/edk2/tree/edk2-stable202602
+
 **Mile.Uefi 1.0.1729.0**
 
 - Add UEFI PI definitions.
