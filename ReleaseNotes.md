@@ -1,6 +1,6 @@
 ﻿# Mile.Uefi Release Notes
 
-**Mile.Uefi 1.0.1843.0**
+**Mile.Uefi 1.0.1844.0**
 
 - Provide UEFI Specification definitions based on 
   [EDK II commit c00c1216ce7f6e02b00da95747a7f4d4c239c1b1 after 202602 Release].
