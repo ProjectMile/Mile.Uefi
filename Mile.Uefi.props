@@ -31,6 +31,8 @@
     <UefiApplicationResourceIncludePath>$(IncludePath)</UefiApplicationResourceIncludePath>
     <IncludePath>$(IncludePath.Replace('$(VC_IncludePath);', ''))</IncludePath>
     <ExternalIncludePath>$(ExternalIncludePath.Replace('$(VC_IncludePath);', ''))</ExternalIncludePath>
+    <IncludePath>$(IncludePath.Replace('$(WindowsSDK_IncludePath);', ''))</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath.Replace('$(WindowsSDK_IncludePath);', ''))</ExternalIncludePath>
     <UefiPlatform Condition="'$(Platform)'=='ARM64'">AArch64</UefiPlatform>
     <UefiPlatform Condition="'$(Platform)'=='x64'">X64</UefiPlatform>   
     <IncludePath Condition="'$(MileUefiDisableUefiHeaders)' != 'true'">$(MSBuildThisFileDirectory)Specification\Include\$(UefiPlatform)\;$(IncludePath)</IncludePath>
