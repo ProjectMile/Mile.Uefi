@@ -12,8 +12,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 
 **/
 
-#ifndef __BASE_H__
-#define __BASE_H__
+#pragma once
 
 //
 // Include processor specific binding
@@ -1332,9 +1331,6 @@ typedef UINTN RETURN_STATUS;
     (SIGNATURE_32 (A, B, C, D) | ((UINT64) (SIGNATURE_32 (E, F, G, H)) << 32))
 
 #if defined (_MSC_EXTENSIONS) && !defined (__INTEL_COMPILER) && !defined (MDE_CPU_EBC)
-#ifdef __cplusplus
-extern "C"
-#endif
 void *
 _ReturnAddress (
   void
@@ -1394,5 +1390,3 @@ _ReturnAddress (
 
 **/
 #define ARRAY_SIZE(Array)  (sizeof (Array) / sizeof ((Array)[0]))
-
-#endif
