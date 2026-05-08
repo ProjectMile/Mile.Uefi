@@ -1,5 +1,12 @@
 ﻿# Mile.Uefi Release Notes
 
+**Mile.Uefi 1.0.1846.0**
+
+- Provide UEFI Specification definitions based on 
+  [EDK II commit b03a21a63e3bd001f52c527e5a57feddb53a690b after 202602 Release].
+
+[EDK II commit b03a21a63e3bd001f52c527e5a57feddb53a690b after 202602 Release]: https://github.com/tianocore/edk2/tree/b03a21a63e3bd001f52c527e5a57feddb53a690b
+
 **Mile.Uefi 1.0.1845.0**
 
 - Provide UEFI Specification definitions based on 
