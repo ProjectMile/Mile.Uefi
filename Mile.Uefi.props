@@ -23,18 +23,18 @@
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <TargetExt Condition="'$(MileProjectType)'=='UefiApplication'">.efi</TargetExt>
-    <TargetExt Condition="'$(MileProjectType)'=='UefiBootServiceDriver'">.efi</TargetExt>
-    <TargetExt Condition="'$(MileProjectType)'=='UefiRom'">.efi</TargetExt>
-    <TargetExt Condition="'$(MileProjectType)'=='UefiRuntimeDriver'">.efi</TargetExt>
+    <TargetExt Condition="'$(MileProjectType)' == 'UefiApplication'">.efi</TargetExt>
+    <TargetExt Condition="'$(MileProjectType)' == 'UefiBootServiceDriver'">.efi</TargetExt>
+    <TargetExt Condition="'$(MileProjectType)' == 'UefiRom'">.efi</TargetExt>
+    <TargetExt Condition="'$(MileProjectType)' == 'UefiRuntimeDriver'">.efi</TargetExt>
     <LinkIncremental>false</LinkIncremental>
     <UefiApplicationResourceIncludePath>$(IncludePath)</UefiApplicationResourceIncludePath>
     <IncludePath>$(IncludePath.Replace('$(VC_IncludePath);', ''))</IncludePath>
     <ExternalIncludePath>$(ExternalIncludePath.Replace('$(VC_IncludePath);', ''))</ExternalIncludePath>
     <IncludePath>$(IncludePath.Replace('$(WindowsSDK_IncludePath);', ''))</IncludePath>
     <ExternalIncludePath>$(ExternalIncludePath.Replace('$(WindowsSDK_IncludePath);', ''))</ExternalIncludePath>
-    <UefiPlatform Condition="'$(Platform)'=='ARM64'">AArch64</UefiPlatform>
-    <UefiPlatform Condition="'$(Platform)'=='x64'">X64</UefiPlatform>   
+    <UefiPlatform Condition="'$(Platform)' == 'ARM64'">AArch64</UefiPlatform>
+    <UefiPlatform Condition="'$(Platform)' == 'x64'">X64</UefiPlatform>   
     <IncludePath Condition="'$(MileUefiDisableUefiHeaders)' != 'true'">$(MSBuildThisFileDirectory)Specification\Include\$(UefiPlatform)\;$(IncludePath)</IncludePath>
     <IncludePath Condition="'$(MileUefiDisableUefiHeaders)' != 'true'">$(MSBuildThisFileDirectory)Specification\Include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
@@ -71,7 +71,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+  <ItemDefinitionGroup Condition="'$(Configuration)' == 'Release'">
     <ClCompile>
       <AdditionalOptions>/Gw %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -89,10 +89,10 @@
       <GuardSignedReturns></GuardSignedReturns>
     </ClCompile>
     <Link>
-      <SubSystem Condition="'$(MileProjectType)'=='UefiApplication'">EFI Application</SubSystem>
-      <SubSystem Condition="'$(MileProjectType)'=='UefiBootServiceDriver'">EFI Boot Service Driver</SubSystem>
-      <SubSystem Condition="'$(MileProjectType)'=='UefiRom'">EFI ROM</SubSystem>
-      <SubSystem Condition="'$(MileProjectType)'=='UefiRuntimeDriver'">EFI Runtime</SubSystem>
+      <SubSystem Condition="'$(MileProjectType)' == 'UefiApplication'">EFI Application</SubSystem>
+      <SubSystem Condition="'$(MileProjectType)' == 'UefiBootServiceDriver'">EFI Boot Service Driver</SubSystem>
+      <SubSystem Condition="'$(MileProjectType)' == 'UefiRom'">EFI ROM</SubSystem>
+      <SubSystem Condition="'$(MileProjectType)' == 'UefiRuntimeDriver'">EFI Runtime</SubSystem>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <DataExecutionPrevention></DataExecutionPrevention>
       <CETCompat></CETCompat>
