@@ -87,6 +87,7 @@
       <ControlFlowGuard></ControlFlowGuard>
       <GuardEHContMetadata></GuardEHContMetadata>
       <GuardSignedReturns></GuardSignedReturns>
+      <AdditionalOptions Condition="'$(Platform)' == 'ARM64' and '$(VCToolsVersion)' != '' and $([MSBuild]::VersionGreaterThanOrEquals('$(VCToolsVersion)', '14.44.35207'))">%(AdditionalOptions) /forceInterlockedFunctions-</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem Condition="'$(MileProjectType)' == 'UefiApplication'">EFI Application</SubSystem>
