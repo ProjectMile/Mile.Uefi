@@ -1,5 +1,10 @@
 ﻿# Mile.Uefi Release Notes
 
+**Mile.Uefi 1.0.1898.0**
+
+- Ensure using inline interlocked functions for ARM64 targets.
+- Simplify the condition logic for project configurations.
+
 **Mile.Uefi 1.0.1846.0**
 
 - Provide UEFI Specification definitions based on [EDK II 202605 Release].
