@@ -1,5 +1,11 @@
 ﻿# Mile.Uefi Release Notes
 
+**Mile.Uefi 1.0.1908.0**
+
+- Decouple more project configurations from specific configuration profiles.
+- Use global.json to simplify the MSBuild Project SDK version resolving.
+- Update Mile.Project.Configurations to 1.0.2060.
+
 **Mile.Uefi 1.0.1898.0**
 
 - Ensure using inline interlocked functions for ARM64 targets.
