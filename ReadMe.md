@@ -6,11 +6,11 @@ The lightweight UEFI toolchain for Visual Studio (MSBuild) C++ projects.
 
 ## Features
 
-- Provide UEFI Specification definitions based on [EDK II 202605 Release].
+- Provide UEFI Specification definitions based on [EDK II 202608 Release].
 - Provide NuGet package for Visual Studio out-of-box development experience.
 - Provide x64 and ARM64 target support.
 
-[EDK II 202605 Release]: https://github.com/tianocore/edk2/tree/edk2-stable202605
+[EDK II 202608 Release]: https://github.com/tianocore/edk2/tree/edk2-stable202608
 
 ## Available MSBuild project options
 
